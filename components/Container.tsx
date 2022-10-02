@@ -2,6 +2,7 @@ import Head from "next/head";
 import { useRouter } from "next/router";
 import Link from "next/link";
 import { GithubIcon } from "./icons/Github";
+import Footer from "./Footer";
 
 const MenuItems = [
   {
@@ -43,7 +44,7 @@ export default function Container(props: Props) {
   };
 
   return (
-    <div className=" max-w-3xl mx-auto">
+    <div className="flex flex-col max-w-3xl h-screen mx-auto">
       <Head>
         <title>{meta.title}</title>
         <meta name="description" content={meta.description} />
@@ -67,14 +68,15 @@ export default function Container(props: Props) {
           })}
         </div>
         <div className="flex items-center">
-          <button className="flex hover:bg-gray-100 py-2 px-3 rounded">
+          <button className="flex hover:bg-gray-100 py-2 px-3 rounded items-center">
             <GithubIcon />
             &nbsp;
             <span>Github</span>
           </button>
         </div>
       </nav>
-      <main className="mt-10 bg-purple-400">{children}</main>
+      <main className="mb-auto mt-8 px-6">{children}</main>
+      <Footer />
     </div>
   );
 }

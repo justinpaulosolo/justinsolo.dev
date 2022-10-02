@@ -18,17 +18,17 @@ export default function Footer() {
             </Link>
           </li>
           <li>
-            <Link href="/">
+            <Link href="/about">
               <a className="hover:underline">About</a>
             </Link>
           </li>
           <li>
-            <Link href="/">
+            <Link href="/blog">
               <a className="hover:underline">Blogs</a>
             </Link>
           </li>
           <li>
-            <Link href="/">
+            <Link href="/projects">
               <a className="hover:underline">Projects</a>
             </Link>
           </li>

@@ -41,9 +41,9 @@ const Home: NextPage = () => {
           <Image
             src="/profile.jpeg"
             alt="profile-picture"
-            width={120}
-            height={120}
-            className="rounded-full"
+            width={100}
+            height={100}
+            className="rounded-2xl"
           ></Image>
         </div>
       </div>

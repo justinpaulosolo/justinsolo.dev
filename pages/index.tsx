@@ -1,6 +1,7 @@
 import type { NextPage } from "next";
 import Container from "../components/Container";
 import Image from "next/image";
+import Link from "next/link";
 
 const Home: NextPage = () => {
   return (
@@ -8,14 +9,25 @@ const Home: NextPage = () => {
       <div className="flex items-center justify-between">
         <div>
           <h1 className="text-6xl tracking-tighter font-bold">Justin Solo</h1>
-          <p className="text-gray-900">Full Stack Developer</p>
+          <p className="text-gray-900 text-lg">Full Stack Developer</p>
+          <div className="flex space-x-3">
+            <Link href="/">
+              <a className="text-blue-600 hover:underline">LinkedIn</a>
+            </Link>
+            <Link href="/">
+              <a className="text-blue-600 hover:underline">Github</a>
+            </Link>
+            <Link href="/">
+              <a className="text-blue-600 hover:underline">Twitter</a>
+            </Link>
+          </div>
         </div>
         <div>
           <Image
             src="/profile.jpeg"
             alt="profile-picture"
-            width={150}
-            height={150}
+            width={100}
+            height={100}
             className="rounded-full"
           ></Image>
         </div>

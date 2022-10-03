@@ -10,14 +10,14 @@ export default function Footer() {
         </div>
         <div className="row mt-1">
           <div className="flex justify-between">
-            <span className="text-gray-700 ">
+            <span className="text-gray-700 hidden md:block">
               © 2022 &nbsp;
               <Link href="/">
                 <a className="hover:underline">Justin Solo™</a>
               </Link>
               . All rights reserved.
             </span>
-            <div>
+            <div className="hidden md:block">
               <ul className="flex space-x-4 text-gray-600">
                 <li>
                   <Link href="/">

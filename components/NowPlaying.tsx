@@ -8,7 +8,7 @@ export default function NowPlaying() {
   return (
     <div>
       <div className="inline-flex items-center flex-col sm:flex-row w-full max-w-full truncate">
-        <FaSpotify /> &nbsp;
+        <FaSpotify className="md:mr-2" />
         {data?.songUrl ? (
           <a
             className="capsize text-gray-800 font-medium  max-w-max truncate"

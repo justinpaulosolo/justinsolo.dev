@@ -1,7 +1,8 @@
 import type { NextPage } from "next";
 import Container from "../components/Container";
-import Image from "next/image";
-import Link from "next/link";
+import Image from "next/future/image";
+
+import profile from "../public/profile.jpeg";
 
 const Home: NextPage = () => {
   return (
@@ -39,12 +40,12 @@ const Home: NextPage = () => {
         </div>
         <div className="flex items-center">
           <Image
-            src="/profile.jpeg"
-            alt="profile-picture"
+            src={profile}
+            alt="profile-pic"
             width={100}
             height={100}
             className="rounded-2xl"
-          ></Image>
+          />
         </div>
       </div>
       <div className="mt-12 mb-4">

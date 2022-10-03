@@ -49,8 +49,10 @@ export default function Container(props: Props) {
   function toggleMenu() {
     if (menuOpen) {
       setMenuOpen(false);
+      document.body.style.overflow = "";
     } else {
       setMenuOpen(true);
+      document.body.style.overflow = "hidden";
     }
   }
 
@@ -91,7 +93,7 @@ export default function Container(props: Props) {
           </div>
         </div>
         {menuOpen && (
-          <div className="absolute bg-white w-full border-b ml-4">
+          <div className="absolute bg-white w-full h-screen ml-4">
             {MenuItems.map((item, index) => {
               return (
                 <Link href={item.url} key={index}>

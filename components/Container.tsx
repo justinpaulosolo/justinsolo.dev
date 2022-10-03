@@ -3,6 +3,8 @@ import { useRouter } from "next/router";
 import Link from "next/link";
 import { GithubIcon } from "./icons/Github";
 import Footer from "./Footer";
+import { HiMenu } from "react-icons/hi";
+import { useState } from "react";
 
 const MenuItems = [
   {
@@ -34,6 +36,7 @@ interface Props {
 }
 
 export default function Container(props: Props) {
+  const [menuOpen, setMenuOpen] = useState(false);
   const router = useRouter();
   const { children, ...customMeta } = props;
   const meta = {
@@ -43,6 +46,14 @@ export default function Container(props: Props) {
     ...customMeta,
   };
 
+  function toggleMenu() {
+    if (menuOpen) {
+      setMenuOpen(false);
+    } else {
+      setMenuOpen(true);
+    }
+  }
+
   return (
     <div className="flex flex-col max-w-3xl h-screen mx-auto">
       <Head>
@@ -51,29 +62,51 @@ export default function Container(props: Props) {
         <link rel="icon" href="/favicon.ico" />
         <meta property="og:type" content={meta.type}></meta>
       </Head>
-      <nav className="flex justify-between w-full py-5 px-3">
-        <div>
-          {MenuItems.map((item, index) => {
-            return (
-              <Link href={item.url} key={index}>
-                <a
-                  className={`hover:bg-gray-100 py-2 px-3 rounded
+      <nav className="w-3xl">
+        <div className="flex items-center justify-between w-full py-5 px-3">
+          <div className="hidden md:block">
+            {MenuItems.map((item, index) => {
+              return (
+                <Link href={item.url} key={index}>
+                  <a
+                    className={`hover:bg-gray-100 py-2 px-3 rounded
                 ${router.asPath === item.url ? "font-bold" : ""}
                 `}
-                >
-                  {item.lable}
-                </a>
-              </Link>
-            );
-          })}
-        </div>
-        <div className="flex items-center">
-          <button className="flex color:gray-600 hover:text-white hover:bg-blue-500 py-2 px-3 rounded items-center">
-            <GithubIcon />
-            &nbsp;
-            <span>Source Code</span>
+                  >
+                    {item.lable}
+                  </a>
+                </Link>
+              );
+            })}
+          </div>
+          <button onClick={toggleMenu}>
+            <HiMenu className="md:hidden h-7 w-7 ml-4" />
           </button>
+          <div className="flex items-center">
+            <button className="flex color:gray-600 hover:text-white hover:bg-blue-500 py-2 px-3 rounded items-center">
+              <GithubIcon />
+              &nbsp;
+              <span className="hidden md:block">Source Code</span>
+            </button>
+          </div>
         </div>
+        {menuOpen && (
+          <div className="absolute bg-white w-full border-b ml-4">
+            {MenuItems.map((item, index) => {
+              return (
+                <Link href={item.url} key={index}>
+                  <a
+                    className={`block hover:bg-gray-100 py-2 px-3 rounded
+                ${router.asPath === item.url ? "font-bold" : ""}
+                `}
+                  >
+                    {item.lable}
+                  </a>
+                </Link>
+              );
+            })}
+          </div>
+        )}
       </nav>
       <main className="mb-auto mt-8 px-6">{children}</main>
       <Footer />

@@ -5,7 +5,6 @@ import { FaSpotify } from "react-icons/fa/";
 
 export default function NowPlaying() {
   const { data } = useSWR<NowPlayingSong>("/api/now-playing", fetcher);
-  console.log(data);
   return (
     <div>
       <div className="inline-flex items-center flex-col sm:flex-row w-full max-w-full truncate">
@@ -20,14 +19,12 @@ export default function NowPlaying() {
             {data.title}
           </a>
         ) : (
-          <p className="capsize text-gray-800 dark:text-gray-200 font-medium">
-            Not Playing
-          </p>
+          <p className="capsize text-gray-800font-medium">Not Playing</p>
         )}
-        <span className="capsize mx-2 text-gray-500 dark:text-gray-300 hidden sm:block">
+        <span className="capsize mx-2 text-gray-500 hidden sm:block">
           {" – "}
         </span>
-        <p className="capsize text-gray-500 dark:text-gray-300 max-w-max truncate">
+        <p className="capsize text-gray-500 max-w-max truncate">
           {data?.artist ?? "Spotify"}
         </p>
       </div>

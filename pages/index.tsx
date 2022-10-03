@@ -1,8 +1,6 @@
 import type { NextPage } from "next";
 import Container from "../components/Container";
 import Image from "next/image";
-import Link from "next/link";
-import NowPlaying from "../components/NowPlaying";
 
 const Home: NextPage = () => {
   return (
@@ -37,9 +35,7 @@ const Home: NextPage = () => {
           </div>
         </div>
       </div>
-      <div>
-        <NowPlaying />
-      </div>
+      <div></div>
     </Container>
   );
 };

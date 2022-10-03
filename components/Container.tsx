@@ -5,6 +5,7 @@ import { GithubIcon } from "./icons/Github";
 import Footer from "./Footer";
 import { HiMenu } from "react-icons/hi";
 import { useState } from "react";
+import { GoLogoGithub } from "react-icons/go";
 
 const MenuItems = [
   {
@@ -64,7 +65,7 @@ export default function Container(props: Props) {
         <link rel="icon" href="/favicon.ico" />
         <meta property="og:type" content={meta.type}></meta>
       </Head>
-      <nav className="w-3xl">
+      <nav>
         <div className="flex items-center justify-between w-full py-5 px-3">
           <div className="hidden md:block">
             {MenuItems.map((item, index) => {
@@ -81,10 +82,15 @@ export default function Container(props: Props) {
               );
             })}
           </div>
-          <button onClick={toggleMenu}>
-            <HiMenu className="md:hidden h-7 w-7 ml-4" />
-          </button>
-          <div className="flex items-center">
+          <div className="md:hidden">
+            <button onClick={toggleMenu}>
+              <HiMenu className="h-7 w-7" />
+            </button>
+          </div>
+          <div className="md:hidden">
+            <GoLogoGithub className="w-28 h-7" />
+          </div>
+          <div className="hidden md:flex items-center">
             <button className="flex color:gray-600 hover:text-white hover:bg-blue-500 py-2 px-3 rounded items-center">
               <GithubIcon />
               &nbsp;

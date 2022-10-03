@@ -2,6 +2,7 @@ import type { NextPage } from "next";
 import Container from "../components/Container";
 import Image from "next/image";
 import Link from "next/link";
+import NowPlaying from "../components/NowPlaying";
 
 const Home: NextPage = () => {
   return (
@@ -35,6 +36,9 @@ const Home: NextPage = () => {
             <h4 className="font-medium">Title here</h4>
           </div>
         </div>
+      </div>
+      <div>
+        <NowPlaying />
       </div>
     </Container>
   );

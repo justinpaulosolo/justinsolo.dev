@@ -1,11 +1,11 @@
 import Head from "next/head";
 import { useRouter } from "next/router";
 import Link from "next/link";
-import { GithubIcon } from "./icons/Github";
 import Footer from "./Footer";
 import { HiMenu } from "react-icons/hi";
 import { useState } from "react";
 import { GoLogoGithub } from "react-icons/go";
+import { SiGithub } from "react-icons/si";
 
 const MenuItems = [
   {
@@ -72,8 +72,12 @@ export default function Container(props: Props) {
               return (
                 <Link href={item.url} key={index}>
                   <a
-                    className={`hover:bg-gray-100 py-2 px-3 rounded
-                ${router.asPath === item.url ? "font-bold" : ""}
+                    className={`hover:bg-gray-100 hover:text-gray-800  py-2 px-3 rounded
+                ${
+                  router.asPath === item.url
+                    ? "text-blue-600 shadow-blue-600 font-medium"
+                    : "text-gray-600"
+                }
                 `}
                   >
                     {item.lable}
@@ -95,9 +99,9 @@ export default function Container(props: Props) {
               href="https://github.com/justinpaulosolo/justinsolo.io"
               target="_blank"
               rel="noopener noreferrer"
-              className="flex color:gray-600 hover:text-white hover:bg-blue-500 py-2 px-3 rounded items-center"
+              className="flex color:gray-600 hover:text-white text-gray-600 hover:bg-blue-500 py-2 px-3 rounded items-center"
             >
-              <GithubIcon />
+              <SiGithub />
               &nbsp;
               <span className="hidden md:block">Source Code</span>
             </a>

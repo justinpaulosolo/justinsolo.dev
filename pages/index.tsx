@@ -10,7 +10,7 @@ const Home: NextPage = () => {
       <div className="flex items-center justify-between">
         <div>
           <h1 className="text-6xl tracking-tighter font-bold">Justin Solo</h1>
-          <p className="text-gray-900 text-lg">Full Stack Developer</p>
+          <p className="text-gray-800 text-lg">Full Stack Developer</p>
           <div className="flex space-x-3">
             <a
               href="https://www.linkedin.com/in/justinpaulosolo/"

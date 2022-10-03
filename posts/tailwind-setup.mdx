@@ -38,9 +38,10 @@ npm install -D tailwindcss postcss autoprefixer
 npx tailwindcss init -p
 ```
 
-<SyntaxHighlighter language="javascript">
-{`
-module.exports = {
+### 3. Modify tailwind.config.js
+
+<SyntaxHighlighter language="javascript" showLineNumbers>
+  {`module.exports = {
   content: [
     "./pages/**/_.{js,ts,jsx,tsx}",
     "./components/\*\*/_.{js,ts,jsx,tsx}",
@@ -49,7 +50,13 @@ module.exports = {
   extend: {},
   },
   plugins: [],
-}
-`}
+}`}
+</SyntaxHighlighter>
 
+### 3. Add directives to global CSS
+
+<SyntaxHighlighter language="css" showLineNumbers>
+  {`@tailwind base;
+@tailwind components;
+@tailwind utilities;`}
 </SyntaxHighlighter>

@@ -92,16 +92,6 @@ const Home = ({ posts }: { posts: Posts[] }) => {
           slug={posts[0].slug}
           index="01"
         />
-        <RecentPostsCard
-          title={posts[0].frontmatter.title}
-          slug={posts[0].slug}
-          index="01"
-        />
-        <RecentPostsCard
-          title={posts[0].frontmatter.title}
-          slug={posts[0].slug}
-          index="01"
-        />
       </div>
       <div className="flex justify-center"></div>
     </Container>

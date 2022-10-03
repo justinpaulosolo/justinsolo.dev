@@ -6,6 +6,7 @@ import { HiMenu } from "react-icons/hi";
 import { useState } from "react";
 import { GoLogoGithub } from "react-icons/go";
 import { SiGithub } from "react-icons/si";
+import { useEffect } from "react";
 
 const MenuItems = [
   {
@@ -56,6 +57,12 @@ export default function Container(props: Props) {
       document.body.style.overflow = "hidden";
     }
   }
+
+  useEffect(() => {
+    return function cleanup() {
+      document.body.style.overflow = "";
+    };
+  }, []);
 
   return (
     <div className="flex flex-col max-w-3xl h-screen mx-auto">

@@ -11,23 +11,38 @@ const Home: NextPage = () => {
           <h1 className="text-6xl tracking-tighter font-bold">Justin Solo</h1>
           <p className="text-gray-900 text-lg">Full Stack Developer</p>
           <div className="flex space-x-3">
-            <Link href="/">
-              <a className="text-blue-600 hover:underline">LinkedIn</a>
-            </Link>
-            <Link href="/">
-              <a className="text-blue-600 hover:underline">Github</a>
-            </Link>
-            <Link href="/">
-              <a className="text-blue-600 hover:underline">Twitter</a>
-            </Link>
+            <a
+              href="https://www.linkedin.com/in/justinpaulosolo/"
+              target="_blank"
+              rel="noreferrer"
+              className="text-blue-600 hover:underline"
+            >
+              LinkedIn
+            </a>
+            <a
+              href="https://www.github.com/justinpaulosolo/"
+              target="_blank"
+              rel="noreferrer"
+              className="text-blue-600 hover:underline"
+            >
+              Github
+            </a>
+            <a
+              href="https://www.twitter.com/"
+              target="_blank"
+              rel="noreferrer"
+              className="text-blue-600 hover:underline"
+            >
+              Twitter
+            </a>
           </div>
         </div>
-        <div>
+        <div className="flex items-center">
           <Image
             src="/profile.jpeg"
             alt="profile-picture"
-            width={100}
-            height={100}
+            width={120}
+            height={120}
             className="rounded-full"
           ></Image>
         </div>
@@ -43,6 +58,12 @@ const Home: NextPage = () => {
         <div className="border-b hover:cursor-pointer border-gray-200 tansform hover:scale-[1.01] py-3 tansition-all ">
           <div className="flex">
             <div className="mr-4 text-gray-600">02</div>
+            <h4 className="font-medium">Title here</h4>
+          </div>
+        </div>
+        <div className="border-b hover:cursor-pointer border-gray-200 tansform hover:scale-[1.01] py-3 tansition-all ">
+          <div className="flex">
+            <div className="mr-4 text-gray-600">03</div>
             <h4 className="font-medium">Title here</h4>
           </div>
         </div>

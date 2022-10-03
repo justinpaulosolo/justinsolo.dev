@@ -20,7 +20,7 @@ const Home: NextPage = () => {
           ></Image>
         </div>
       </div>
-      <div className="mt-4 mb-4">
+      <div className="mt-12 mb-4">
         <h1 className="font-bold text-3xl">Recent Posts</h1>
         <div className="border-b hover:cursor-pointer border-gray-200 tansform hover:scale-[1.01] py-3 tansition-all ">
           <div className="flex">

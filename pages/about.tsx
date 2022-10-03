@@ -8,7 +8,7 @@ import {
   SiSqlite,
   SiDotnet,
   SiVercel,
-  SiV,
+  SiNodedotjs,
 } from "react-icons/si";
 
 export function SocialLinks({ url, title }: { url: string; title: string }) {
@@ -57,6 +57,7 @@ export default function About() {
           <SiTypescript className="h-11 w-11" />
           <SiReact className="h-11 w-11" />
           <SiNextdotjs className="h-11 w-11" />
+          <SiNodedotjs className="h-11 w-11" />
           <SiTailwindcss className="h-11 w-11" />
           <SiPrisma className="h-11 w-11" />
           <SiSqlite className="h-11 w-11" />

@@ -93,12 +93,12 @@ export default function Container(props: Props) {
           </div>
         </div>
         {menuOpen && (
-          <div className="absolute bg-white w-full h-screen ml-4">
+          <div className="absolute bg-white w-full h-screen ml-4 pr-10">
             {MenuItems.map((item, index) => {
               return (
                 <Link href={item.url} key={index}>
                   <a
-                    className={`block hover:bg-gray-100 py-2 px-3 rounded
+                    className={`block hover:bg-gray-100 py-2 w-full px-3 rounded
                 ${router.asPath === item.url ? "font-bold" : ""}
                 `}
                   >

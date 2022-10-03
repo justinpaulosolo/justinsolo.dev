@@ -91,11 +91,16 @@ export default function Container(props: Props) {
             <GoLogoGithub className="w-28 h-7" />
           </div>
           <div className="hidden md:flex items-center">
-            <button className="flex color:gray-600 hover:text-white hover:bg-blue-500 py-2 px-3 rounded items-center">
+            <a
+              href="https://github.com/justinpaulosolo/justinsolo.io"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="flex color:gray-600 hover:text-white hover:bg-blue-500 py-2 px-3 rounded items-center"
+            >
               <GithubIcon />
               &nbsp;
               <span className="hidden md:block">Source Code</span>
-            </button>
+            </a>
           </div>
         </div>
         {menuOpen && (

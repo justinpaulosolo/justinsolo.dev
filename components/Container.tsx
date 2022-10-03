@@ -68,10 +68,10 @@ export default function Container(props: Props) {
           })}
         </div>
         <div className="flex items-center">
-          <button className="flex color:gray-600 hover:bg-gray-100 py-2 px-3 rounded items-center">
+          <button className="flex color:gray-600 hover:bg-blue-500 py-2 px-3 rounded items-center">
             <GithubIcon />
             &nbsp;
-            <span className="text-gray-600">Source Code</span>
+            <span className="text-gray-600 hover:text-white">Source Code</span>
           </button>
         </div>
       </nav>

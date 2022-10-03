@@ -68,7 +68,7 @@ const Home: NextPage = () => {
           </div>
         </div>
       </div>
-      <div></div>
+      <div className="flex justify-center"></div>
     </Container>
   );
 };

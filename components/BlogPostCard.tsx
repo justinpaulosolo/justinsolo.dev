@@ -14,7 +14,7 @@ export function BlogPostCard({ blog }: { blog: Post }) {
             </h5>
           </a>
         </Link>
-        <p className="mb-2 font-bold text-gray-800">Sept 1, 2022</p>
+        <p className="mb-2 font-bold text-gray-800">{blog.frontmatter.date}</p>
         <p className="mb-3 font-normal text-gray-700">
           {blog.frontmatter.description}
         </p>

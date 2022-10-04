@@ -18,11 +18,13 @@ export default function BlogPostCard({ blog }: { blog: Post }) {
   return (
     <div className="w-full rounded-lg border border-gray-200 bg-white shadow-md md:max-w-[350px] ">
       <div className="p-5">
-        <a href="#">
-          <h5 className="mb-2 text-2xl font-bold tracking-tight text-gray-900">
-            {blog.frontmatter.title}
-          </h5>
-        </a>
+        <Link href={"/blog/" + blog.slug} passHref>
+          <a>
+            <h5 className="mb-2 text-2xl font-bold tracking-tight text-gray-900">
+              {blog.frontmatter.title}
+            </h5>
+          </a>
+        </Link>
         <p className="mb-2 font-bold text-gray-800">Sept 1, 2022</p>
         <p className="mb-3 font-normal text-gray-700">
           {blog.frontmatter.description}

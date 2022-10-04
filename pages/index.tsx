@@ -44,7 +44,7 @@ const Home = ({ posts }: { posts: Posts[] }) => {
   console.log(posts[0].frontmatter.title);
   return (
     <Container>
-      <div className="flex items-center justify-between">
+      <div className="items-centera flex justify-between rounded-lg border border-gray-200 p-5 py-10 shadow-md">
         <div>
           <h1 className="text-6xl font-bold tracking-tighter">Justin Solo</h1>
           <p className="text-lg text-gray-800">Full Stack Developer</p>
@@ -81,7 +81,7 @@ const Home = ({ posts }: { posts: Posts[] }) => {
             alt="profile-pic"
             width={100}
             height={100}
-            className="rounded-2xl"
+            className="rounded-full"
           />
         </div>
       </div>

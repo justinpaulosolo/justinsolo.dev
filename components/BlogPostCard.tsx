@@ -17,17 +17,6 @@ export default function BlogPostCard({ blog }: { blog: Post }) {
   console.log(blog);
   return (
     <div className="w-full rounded-lg border border-gray-200 bg-white shadow-md md:max-w-[350px] ">
-      {/* <a href="#">
-        <Image
-          src={blog.frontmatter.thumbnailUrl}
-          width={100}
-          height={100}
-          style={css}
-          object-fit="true"
-          alt="blog-image"
-          priority
-        />
-      </a> */}
       <div className="p-5">
         <a href="#">
           <h5 className="mb-2 text-2xl font-bold tracking-tight text-gray-900">

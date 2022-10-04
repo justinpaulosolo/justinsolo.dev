@@ -1,0 +1,48 @@
+---
+title: "How to install Neovim on macOS"
+date: "October 2, 2021"
+description: "Here's a short guide on installing/building Neovim"
+thumbnailUrl: "/tailwindcss-thumbnail.jpeg"
+tags: ["tailwindcss", "styling"]
+---
+
+<div>Simple guide how to build Neovim from source on macOS.</div>
+
+## Prerequisites
+
+- Clang or GCC version 4.4+
+- CMake version 3.0+
+- Xcode Command Line Tools: `xcode-select --install`
+- Homebrew: `/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"`
+
+### 1. Install dependencies
+
+```bash
+brew install ninja libtool automake cmake pkg-config gettext curl
+```
+
+### 2. Clone the repository
+
+```bash
+git clone https://github.com/neovim/neovim
+```
+
+```
+cd neovim && make CMAKE_BUILD_TYPE=RelWithDebInfo
+```
+
+```
+sudo make install
+```
+
+### 3. Building
+
+```
+make CMAKE_BUILD_TYPE=Release
+```
+
+### 4. Verify build
+
+```
+./build/bin/nvim --version | grep ^Build
+```

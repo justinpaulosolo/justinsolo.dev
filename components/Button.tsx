@@ -1,4 +1,4 @@
-export default function Button({ text }: { text: string }) {
+export function Button({ text }: { text: string }) {
   const handleClick = (event: React.MouseEvent<HTMLButtonElement>) => {
     const input = event.target as HTMLButtonElement;
     input.innerText = "Clicked!";

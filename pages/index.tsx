@@ -1,101 +1,73 @@
-import type { NextPage } from "next";
-import Container from "../components/Container";
-import Image from "next/future/image";
 import fs from "fs";
 import path from "path";
 import matter from "gray-matter";
+import Image from "next/future/image";
 
-import profile from "../public/profile.jpeg";
-import Link from "next/link";
+import profile from "@/public/profile.jpeg";
+import { Container } from "@/components/Container";
+import { RecentPostsCard } from "@/components/home/RecentPostsCard";
+import { SocialMediaLinks } from "@/lib/constants";
+import { Post } from "@/lib/types";
 
-interface Posts {
-  frontmatter: {
-    title: string;
-    date: string;
-    description: string;
-    thumnbailUrl: string;
-    tags: string[];
-  };
-  slug: string;
-}
-
-export const RecentPostsCard = ({
-  title,
-  slug,
-  index,
-}: {
-  title: string;
-  slug: string;
-  index: string;
-}) => {
-  return (
-    <Link href={"/blog/" + slug} passHref>
-      <div className="tansform tansition-all border-b border-gray-200 py-3 hover:scale-[1.01] hover:cursor-pointer ">
-        <div className="flex">
-          <div className="mr-4 text-gray-600">{index}</div>
-          <h4 className="font-medium">{title}</h4>
-        </div>
-      </div>
-    </Link>
-  );
-};
-
-const Home = ({ posts }: { posts: Posts[] }) => {
-  console.log(posts[0].frontmatter.title);
+const Home = ({ posts }: { posts: Post[] }) => {
   return (
     <Container>
-      <div className="items-centera flex justify-between rounded-lg border border-gray-200 p-5 py-10 shadow-md">
-        <div>
-          <h1 className="text-3xl font-bold tracking-tighter md:text-6xl">
-            Justin Solo
-          </h1>
-          <p className="text-lg text-gray-800">Full Stack Developer</p>
-          <div className="flex space-x-3">
-            <a
-              href="https://www.linkedin.com/in/justinpaulosolo/"
-              target="_blank"
-              rel="noreferrer"
-              className="text-blue-600 hover:underline"
-            >
-              LinkedIn
-            </a>
-            <a
-              href="https://www.github.com/justinpaulosolo/"
-              target="_blank"
-              rel="noreferrer"
-              className="text-blue-600 hover:underline"
-            >
-              Github
-            </a>
-            <a
-              href="https://www.twitter.com/"
-              target="_blank"
-              rel="noreferrer"
-              className="text-blue-600 hover:underline"
-            >
-              Twitter
-            </a>
+      <div className="flex flex-col">
+        <div className="mb-4 flex flex-col items-center space-x-4 md:flex-row">
+          <div className="flex items-center">
+            <Image
+              src={profile}
+              alt="profile-pic"
+              width={124}
+              height={124}
+              className="mb-2 rounded-full md:mb-0"
+            />
+          </div>
+          <div>
+            <h1 className="text-3xl font-bold tracking-tighter md:text-6xl">
+              Welcome!
+            </h1>
+            <p className="text-base text-gray-700">
+              I&apos;m{" "}
+              <span className="text-2xl font-bold tracking-tighter text-blue-500 md:text-3xl">
+                Justin Solo
+              </span>{" "}
+              a software engineer from Los Angeles, CA.
+            </p>
+            <div className="flex space-x-3">
+              {SocialMediaLinks.map((link, index) => (
+                <a
+                  key={index}
+                  href={link.url}
+                  target="_blank"
+                  rel="noreferrer"
+                  className="mt-4 transform border-b  text-base text-gray-500 transition-all hover:scale-[1.05] hover:text-blue-500"
+                >
+                  {link.name}
+                </a>
+              ))}
+            </div>
           </div>
         </div>
-        <div className="flex items-center">
-          <Image
-            src={profile}
-            alt="profile-pic"
-            width={100}
-            height={100}
-            className="rounded-full"
+        <div className="mt-12 mb-4">
+          <h1 className="text-3xl font-bold">Recent Posts</h1>
+          <RecentPostsCard
+            title={posts[0].frontmatter.title}
+            slug={posts[0].slug}
+            index="01"
+          />
+          <RecentPostsCard
+            title={posts[0].frontmatter.title}
+            slug={posts[0].slug}
+            index="01"
+          />
+          <RecentPostsCard
+            title={posts[0].frontmatter.title}
+            slug={posts[0].slug}
+            index="01"
           />
         </div>
       </div>
-      <div className="mt-12 mb-4">
-        <h1 className="text-3xl font-bold">Recent Posts</h1>
-        <RecentPostsCard
-          title={posts[0].frontmatter.title}
-          slug={posts[0].slug}
-          index="01"
-        />
-      </div>
-      <div className="flex justify-center"></div>
     </Container>
   );
 };

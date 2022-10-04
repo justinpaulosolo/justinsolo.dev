@@ -1,19 +1,9 @@
-import Container from "../components/Container";
-import BlogPostCard from "../components/BlogPostCard";
 import fs from "fs";
 import path from "path";
 import matter from "gray-matter";
-
-interface Post {
-  frontmatter: {
-    title: string;
-    date: string;
-    description: string;
-    thumbnailUrl: string;
-    tags: string[];
-  };
-  slug: string;
-}
+import { Container } from "@/components/Container";
+import { BlogPostCard } from "@/components/BlogPostCard";
+import { Post } from "@/lib/types";
 
 export default function Blog({ posts }: { posts: Post[] }) {
   console.log(posts);

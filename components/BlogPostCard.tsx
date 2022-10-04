@@ -17,7 +17,7 @@ export default function BlogPostCard({ blog }: { blog: Post }) {
   console.log(blog);
   return (
     <div className="w-full rounded-lg border border-gray-200 bg-white shadow-md md:max-w-[350px] ">
-      <a href="#">
+      {/* <a href="#">
         <Image
           src={blog.frontmatter.thumbnailUrl}
           width={100}
@@ -27,7 +27,7 @@ export default function BlogPostCard({ blog }: { blog: Post }) {
           alt="blog-image"
           priority
         />
-      </a>
+      </a> */}
       <div className="p-5">
         <a href="#">
           <h5 className="mb-2 text-2xl font-bold tracking-tight text-gray-900">
@@ -39,7 +39,7 @@ export default function BlogPostCard({ blog }: { blog: Post }) {
           {blog.frontmatter.description}
         </p>
         <Link href={"/blog/" + blog.slug} passHref>
-          <a className="inline-flex items-center rounded-lg bg-blue-700 py-2 px-3 text-center text-sm font-medium text-white hover:bg-blue-800 focus:outline-none focus:ring-4 focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">
+          <a className="inline-flex items-center rounded-lg bg-blue-500 py-2 px-3 text-center text-sm font-medium text-white hover:bg-blue-600 focus:outline-none focus:ring-4 focus:ring-blue-300">
             Read more
             <svg
               aria-hidden="true"

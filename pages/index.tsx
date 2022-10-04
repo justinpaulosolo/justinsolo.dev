@@ -46,7 +46,9 @@ const Home = ({ posts }: { posts: Posts[] }) => {
     <Container>
       <div className="items-centera flex justify-between rounded-lg border border-gray-200 p-5 py-10 shadow-md">
         <div>
-          <h1 className="text-6xl font-bold tracking-tighter">Justin Solo</h1>
+          <h1 className="text-3xl font-bold tracking-tighter md:text-6xl">
+            Justin Solo
+          </h1>
           <p className="text-lg text-gray-800">Full Stack Developer</p>
           <div className="flex space-x-3">
             <a

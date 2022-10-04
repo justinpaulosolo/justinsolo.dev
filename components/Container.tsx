@@ -65,7 +65,7 @@ export default function Container(props: Props) {
   }, []);
 
   return (
-    <div className="flex flex-col max-w-3xl h-screen mx-auto">
+    <div className="mx-auto flex h-screen max-w-3xl flex-col">
       <Head>
         <title>{meta.title}</title>
         <meta name="description" content={meta.description} />
@@ -73,16 +73,16 @@ export default function Container(props: Props) {
         <meta property="og:type" content={meta.type}></meta>
       </Head>
       <nav>
-        <div className="flex items-center justify-between w-full py-5 px-3">
+        <div className="flex w-full items-center justify-between py-5 px-3">
           <div className="hidden md:block">
             {MenuItems.map((item, index) => {
               return (
                 <Link href={item.url} key={index}>
                   <a
-                    className={`hover:bg-gray-100 hover:text-gray-800  py-2 px-3 rounded
+                    className={`rounded py-2  px-3 hover:bg-gray-100 hover:text-gray-800
                 ${
                   router.asPath === item.url
-                    ? "text-blue-600 shadow-blue-600 font-medium"
+                    ? "font-medium text-blue-600 shadow-blue-600"
                     : "text-gray-600"
                 }
                 `}
@@ -99,14 +99,14 @@ export default function Container(props: Props) {
             </button>
           </div>
           <div className="md:hidden">
-            <GoLogoGithub className="w-28 h-7" />
+            <GoLogoGithub className="h-7 w-28" />
           </div>
-          <div className="hidden md:flex items-center">
+          <div className="hidden items-center md:flex">
             <a
               href="https://github.com/justinpaulosolo/justinsolo.io"
               target="_blank"
               rel="noopener noreferrer"
-              className="flex color:gray-600 hover:text-white text-gray-600 hover:bg-blue-500 py-2 px-3 rounded items-center"
+              className="color:gray-600 flex items-center rounded py-2 px-3 text-gray-600 hover:bg-blue-500 hover:text-white"
             >
               <SiGithub />
               &nbsp;
@@ -115,12 +115,12 @@ export default function Container(props: Props) {
           </div>
         </div>
         {menuOpen && (
-          <div className="absolute bg-white w-full h-screen ml-4 pr-10">
+          <div className="absolute ml-4 h-screen w-full bg-white pr-10">
             {MenuItems.map((item, index) => {
               return (
                 <Link href={item.url} key={index}>
                   <a
-                    className={`block hover:bg-gray-100 py-2 w-full px-3 rounded
+                    className={`block w-full rounded py-2 px-3 hover:bg-gray-100
                 ${router.asPath === item.url ? "font-bold" : ""}
                 `}
                   >

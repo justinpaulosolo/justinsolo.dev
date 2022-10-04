@@ -5,7 +5,7 @@ export default function Button({ text }: { text: string }) {
   };
   return (
     <button
-      className="py-3 px-6 bg-blue-500 text-white rounded-lg"
+      className="rounded-lg bg-blue-500 py-3 px-6 text-white"
       onClick={handleClick}
     >
       {text}

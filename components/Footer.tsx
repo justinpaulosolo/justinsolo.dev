@@ -3,14 +3,14 @@ import NowPlaying from "./NowPlaying";
 
 export default function Footer() {
   return (
-    <footer className="px-6 py-3 border-t border-gray-100">
+    <footer className="border-t border-gray-100 px-6 py-3">
       <div className="flex-col">
         <div className="row">
           <NowPlaying />
         </div>
         <div className="row mt-1">
           <div className="flex justify-between">
-            <span className="text-gray-700 hidden md:block">
+            <span className="hidden text-gray-700 md:block">
               © 2022 &nbsp;
               <Link href="/">
                 <a className="hover:underline">Justin Solo™</a>

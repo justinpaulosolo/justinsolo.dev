@@ -12,7 +12,7 @@ export default function BlogLayout({
           {post.frontmatter.title}
         </h1>
         <Suspense fallback={null}>
-          <div className="w-full mt-4 prose max-w-none">{children}</div>
+          <div className="w-full mt-4 prose max-w-none mb-8">{children}</div>
         </Suspense>
       </article>
     </Container>

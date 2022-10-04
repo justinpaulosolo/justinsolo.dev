@@ -38,8 +38,8 @@ export default function About() {
         looking for a full time position as a software engineer.
       </p>
       <div className="mt-4">
-        <h3 className="font-bold text-3xl">On the web</h3>
-        <ul className="list-disc pl-8 mt-1 flex-col">
+        <h3 className="text-3xl font-bold">On the web</h3>
+        <ul className="mt-1 list-disc flex-col pl-8">
           <SocialLinks
             title="LinkedIn"
             url="https://www.linkedin.com/in/justinpaulosolo/"
@@ -52,8 +52,8 @@ export default function About() {
         </ul>
       </div>
       <div className="mt-4">
-        <h3 className="font-bold text-3xl">Current stack</h3>
-        <div className="flex space-x-3 mt-2">
+        <h3 className="text-3xl font-bold">Current stack</h3>
+        <div className="mt-2 flex space-x-3">
           <SiTypescript className="h-11 w-11" />
           <SiReact className="h-11 w-11" />
           <SiNextdotjs className="h-11 w-11" />

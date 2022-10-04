@@ -7,11 +7,11 @@ export default function NowPlaying() {
   const { data } = useSWR<NowPlayingSong>("/api/now-playing", fetcher);
   return (
     <div>
-      <div className="inline-flex items-center flex-col sm:flex-row w-full max-w-full truncate">
+      <div className="inline-flex w-full max-w-full flex-col items-center truncate sm:flex-row">
         <FaSpotify className="md:mr-2" />
         {data?.songUrl ? (
           <a
-            className="capsize text-gray-800 font-medium  max-w-max truncate"
+            className="capsize max-w-max truncate  font-medium text-gray-800"
             href={data.songUrl}
             target="_blank"
             rel="noopener noreferrer"
@@ -21,10 +21,10 @@ export default function NowPlaying() {
         ) : (
           <p className="capsize text-gray-800font-medium">Not Playing</p>
         )}
-        <span className="capsize mx-2 text-gray-500 hidden sm:block">
+        <span className="capsize mx-2 hidden text-gray-500 sm:block">
           {" – "}
         </span>
-        <p className="capsize text-gray-500 max-w-max truncate">
+        <p className="capsize max-w-max truncate text-gray-500">
           {data?.artist ?? "Spotify"}
         </p>
       </div>

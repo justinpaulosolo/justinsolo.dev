@@ -30,7 +30,7 @@ export const RecentPostsCard = ({
 }) => {
   return (
     <Link href={"/blog/" + slug} passHref>
-      <div className="border-b hover:cursor-pointer border-gray-200 tansform hover:scale-[1.01] py-3 tansition-all ">
+      <div className="tansform tansition-all border-b border-gray-200 py-3 hover:scale-[1.01] hover:cursor-pointer ">
         <div className="flex">
           <div className="mr-4 text-gray-600">{index}</div>
           <h4 className="font-medium">{title}</h4>
@@ -46,8 +46,8 @@ const Home = ({ posts }: { posts: Posts[] }) => {
     <Container>
       <div className="flex items-center justify-between">
         <div>
-          <h1 className="text-6xl tracking-tighter font-bold">Justin Solo</h1>
-          <p className="text-gray-800 text-lg">Full Stack Developer</p>
+          <h1 className="text-6xl font-bold tracking-tighter">Justin Solo</h1>
+          <p className="text-lg text-gray-800">Full Stack Developer</p>
           <div className="flex space-x-3">
             <a
               href="https://www.linkedin.com/in/justinpaulosolo/"
@@ -86,7 +86,7 @@ const Home = ({ posts }: { posts: Posts[] }) => {
         </div>
       </div>
       <div className="mt-12 mb-4">
-        <h1 className="font-bold text-3xl">Recent Posts</h1>
+        <h1 className="text-3xl font-bold">Recent Posts</h1>
         <RecentPostsCard
           title={posts[0].frontmatter.title}
           slug={posts[0].slug}

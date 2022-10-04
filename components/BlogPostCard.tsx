@@ -1,18 +1,7 @@
-import Image from "next/future/image";
 import Link from "next/link";
+import { Post } from "@/lib/types";
 
-interface Post {
-  frontmatter: {
-    title: string;
-    date: string;
-    description: string;
-    thumbnailUrl: string;
-    tags: string[];
-  };
-  slug: string;
-}
-
-export default function BlogPostCard({ blog }: { blog: Post }) {
+export function BlogPostCard({ blog }: { blog: Post }) {
   const css = { width: "100%", height: "200px" };
   console.log(blog);
   return (

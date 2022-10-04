@@ -1,12 +1,13 @@
 import fs from "fs";
 import path from "path";
 import matter from "gray-matter";
+import SyntaxHighlighter from "react-syntax-highlighter";
 import { serialize } from "next-mdx-remote/serialize";
 import { MDXRemote } from "next-mdx-remote";
-import SyntaxHighlighter from "react-syntax-highlighter";
 import { GetStaticProps } from "next";
-import Button from "../../components/Button";
-import BlogLayout from "../../components/layouts/BlogLayout";
+
+import { Button } from "../../components/Button";
+import { BlogLayout } from "../../components/layouts/BlogLayout";
 
 const PostPage = ({ frontmatter: { title }, mdxSource }: any) => {
   return (

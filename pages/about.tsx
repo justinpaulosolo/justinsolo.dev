@@ -1,4 +1,3 @@
-import Container from "../components/Container";
 import {
   SiTypescript,
   SiReact,
@@ -11,20 +10,8 @@ import {
   SiNodedotjs,
 } from "react-icons/si";
 
-export function SocialLinks({ url, title }: { url: string; title: string }) {
-  return (
-    <li>
-      <a
-        href={url}
-        target="_blank"
-        rel="noreferrer"
-        className="items-center text-blue-500 hover:underline"
-      >
-        {title}
-      </a>
-    </li>
-  );
-}
+import { Container } from "@/components/Container";
+import { SocialMediaLinks } from "@/lib/constants";
 
 export default function About() {
   return (
@@ -40,15 +27,18 @@ export default function About() {
       <div className="mt-4">
         <h3 className="text-3xl font-bold">On the web</h3>
         <ul className="mt-1 list-disc flex-col pl-8">
-          <SocialLinks
-            title="LinkedIn"
-            url="https://www.linkedin.com/in/justinpaulosolo/"
-          />
-          <SocialLinks
-            title="Github"
-            url="https://www.github.com/justinpaulosolo/"
-          />
-          <SocialLinks title="Twitter" url="https://www.twitter.com/" />
+          {SocialMediaLinks.map((link, index) => (
+            <li key={index}>
+              <a
+                href={link.url}
+                target="_blank"
+                rel="noreferrer"
+                className="items-center text-blue-500 hover:underline"
+              >
+                {link.name}
+              </a>
+            </li>
+          ))}
         </ul>
       </div>
       <div className="mt-4">

@@ -37,7 +37,7 @@ interface Props {
   description?: string;
 }
 
-export default function Container(props: Props) {
+export function Container(props: Props) {
   const [menuOpen, setMenuOpen] = useState(false);
   const router = useRouter();
   const { children, ...customMeta } = props;
@@ -79,11 +79,11 @@ export default function Container(props: Props) {
               return (
                 <Link href={item.url} key={index}>
                   <a
-                    className={`rounded py-2  px-3 hover:bg-gray-100 hover:text-gray-800
+                    className={`rounded py-2  px-3  hover:text-gray-800
                 ${
                   router.asPath === item.url
-                    ? "font-medium text-blue-600 shadow-blue-600"
-                    : "text-gray-600"
+                    ? "font-normal text-blue-500"
+                    : "text-gray-500"
                 }
                 `}
                   >
@@ -106,7 +106,7 @@ export default function Container(props: Props) {
               href="https://github.com/justinpaulosolo/justinsolo.io"
               target="_blank"
               rel="noopener noreferrer"
-              className="color:gray-600 flex items-center rounded py-2 px-3 text-gray-600 hover:bg-blue-500 hover:text-white"
+              className="flex items-center rounded-lg border border-blue-500 bg-blue-500 py-1.5 px-5 text-white transition-all hover:border-blue-500 hover:bg-white hover:text-blue-500"
             >
               <SiGithub />
               &nbsp;

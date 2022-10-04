@@ -6,3 +6,14 @@ export type NowPlayingSong = {
   songUrl: string;
   title: string;
 }
+
+export interface Post {
+  frontmatter: {
+    title: string;
+    date: string;
+    description: string;
+    thumbnailUrl: string;
+    tags: string[];
+  };
+  slug: string;
+}

@@ -1,18 +1,18 @@
 import { PropsWithChildren, Suspense } from "react";
-import Container from "../Container";
+import { Container } from "@/components/Container";
 
-export default function BlogLayout({
+export function BlogLayout({
   children,
   post,
 }: PropsWithChildren<{ post: any }>) {
   return (
     <Container title={post.frontmatter.title}>
       <article>
-        <h1 className="text-3xl md:text-5xl font-bold tracking-tight mb-8">
+        <h1 className="mb-8 text-3xl font-bold tracking-tight md:text-5xl">
           {post.frontmatter.title}
         </h1>
         <Suspense fallback={null}>
-          <div className="w-full mt-4 prose max-w-none mb-8">{children}</div>
+          <div className="prose mt-4 mb-8 w-full max-w-none">{children}</div>
         </Suspense>
       </article>
     </Container>

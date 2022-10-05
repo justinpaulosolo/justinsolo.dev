@@ -41,7 +41,7 @@ const Home = ({ posts }: { posts: Post[] }) => {
                   href={link.url}
                   target="_blank"
                   rel="noreferrer"
-                  className="mt-4 transform border-b  text-base text-gray-500 transition-all hover:scale-[1.05] hover:text-blue-500"
+                  className="mt-4 border-b text-base text-gray-500 transition-all hover:scale-[1.05] hover:text-blue-500"
                 >
                   {link.name}
                 </a>

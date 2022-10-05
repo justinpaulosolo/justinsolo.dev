@@ -1,13 +1,21 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+<div align="center">
+  <h1>justinsolo.io</h1>
+  <p>🚀 Personal website and blog made using Next.js, TypeScript, and Tailwind CSS.</p>
+</div>
 
-## Getting Started
+![Alt Text](public/projects/justinsolo-io.png)
 
-First, run the development server:
 
-```bash
-npm run dev
-# or
-yarn dev
-```
+> ## Features
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+- Blog using MDX
+- Spotify API (now playing)
+- Selft hosted with Vercel
+- NextAuth for authentication
+
+> ## Tech Stack
+
+- Next.js
+- Tailwind CSS
+- Vercel
+- TypeScript

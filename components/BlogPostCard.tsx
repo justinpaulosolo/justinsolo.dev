@@ -5,7 +5,7 @@ export function BlogPostCard({ blog }: { blog: Post }) {
   const css = { width: "100%", height: "200px" };
   console.log(blog);
   return (
-    <Link href={"/blog" + blog.slug}>
+    <Link href={"/blog/" + blog.slug}>
       <div className="tansform w-full rounded-lg border border-gray-200 bg-white transition-all hover:scale-[1.05] hover:cursor-pointer md:max-w-[350px] ">
         <div className="p-5">
           <Link href={"/blog/" + blog.slug} passHref>

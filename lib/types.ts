@@ -12,8 +12,19 @@ export interface Post {
     title: string;
     date: string;
     description: string;
-    thumbnailUrl: string;
+    thumbnailurl: string;
     tags: string[];
+  };
+  slug: string;
+}
+
+export interface Project {
+  frontmatter: {
+    title: string;
+    date: string;
+    description: string;
+    thumbnailUrl: string;
+    technology: string[];
   };
   slug: string;
 }

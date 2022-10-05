@@ -3,10 +3,10 @@ import path from "path";
 import matter from "gray-matter";
 
 import { Container } from "@/components/Container";
-import { Post } from "@/lib/types";
+import { Project } from "@/lib/types";
 import { ProjectCard } from "@/components/ProjectCard";
 
-export default function Projects({ projects }: { projects: Post[] }) {
+export default function Projects({ projects }: { projects: Project[] }) {
   console.log(projects);
   return (
     <Container title="Projects - Justin Solo">

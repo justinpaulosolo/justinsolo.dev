@@ -61,6 +61,11 @@ const Home = ({ posts }: { posts: Post[] }) => {
             slug={posts[1].slug}
             index="02"
           />
+          <RecentPostsCard
+            title={posts[2].frontmatter.title}
+            slug={posts[2].slug}
+            index="03"
+          />
         </div>
       </div>
     </Container>

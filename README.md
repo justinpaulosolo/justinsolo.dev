@@ -1,4 +1,4 @@
-![Alt Text](/projects/justinsolo-io.png)
+![Alt Text](public/projects/justinsolo-io.png)
 
 <h1 style="textAlign: center">JustinSolo.io</h1>
 

@@ -1,6 +1,10 @@
+<div align="center">
+  <h1>justinsolo.io</h1>
+  <p>🚀 Personal website and blog made using Next.js, TypeScript, and Tailwind CSS.</p>
+</div>
+
 ![Alt Text](public/projects/justinsolo-io.png)
 
-<h1 style="textAlign: center">JustinSolo.io</h1>
 
 > ## Features
 

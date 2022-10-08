@@ -7,6 +7,8 @@ import { useState } from "react";
 import { GoLogoGithub } from "react-icons/go";
 import { SiGithub } from "react-icons/si";
 import { useEffect } from "react";
+import { useTheme } from "next-themes";
+import { FiMoon, FiSun } from "react-icons/fi"
 
 const MenuItems = [
   {
@@ -39,6 +41,7 @@ interface Props {
 
 export function Container(props: Props) {
   const [menuOpen, setMenuOpen] = useState(false);
+  const { theme ,setTheme } = useTheme();
   const router = useRouter();
   const { children, ...customMeta } = props;
   const meta = {
@@ -58,6 +61,14 @@ export function Container(props: Props) {
     }
   }
 
+  function handleChangeTheme(e: React.MouseEvent<HTMLButtonElement, MouseEvent>){
+    console.log(theme)
+    if(theme === 'dark')
+      setTheme('light')
+    else 
+      setTheme('dark')
+  }
+
   useEffect(() => {
     return function cleanup() {
       document.body.style.overflow = "";
@@ -65,25 +76,25 @@ export function Container(props: Props) {
   }, []);
 
   return (
-    <div className="mx-auto flex h-screen max-w-3xl flex-col">
+    <div className="mx-auto flex h-screen max-w-3xl flex-col dark:bg-black">
       <Head>
         <title>{meta.title}</title>
         <meta name="description" content={meta.description} />
         <link rel="icon" href="/favicon.ico" />
         <meta property="og:type" content={meta.type}></meta>
       </Head>
-      <nav>
-        <div className="flex w-full items-center justify-between py-5 px-3">
+      <nav className="">
+        <div className="flex w-full items-center justify-between py-5 px-3 ">
           <div className="hidden md:block">
             {MenuItems.map((item, index) => {
               return (
                 <Link href={item.url} key={index}>
                   <a
-                    className={`rounded py-2  px-3  hover:text-gray-800
+                    className={`rounded py-2  px-3 hover:text-gray-800 dark:hover:text-gray-100
                 ${
                   router.asPath === item.url
                     ? "font-normal text-blue-500"
-                    : "text-gray-500"
+                    : "text-gray-500 dark:text-gray-400"
                 }
                 `}
                   >
@@ -98,7 +109,7 @@ export function Container(props: Props) {
               <HiMenu className="h-7 w-7" />
             </button>
           </div>
-          <div className="md:hidden">
+          {/* <div className="md:hidden">
             <GoLogoGithub className="h-7 w-28" />
           </div>
           <div className="hidden items-center md:flex">
@@ -112,6 +123,13 @@ export function Container(props: Props) {
               &nbsp;
               <span className="hidden md:block">Source Code</span>
             </a>
+          </div> */}
+          <div>
+            <button onClick={handleChangeTheme} className="flex justify-center items-center dark:bg-gray-500 dark:border-gray-500 dark:hover:border-gray-200 bg-gray-200 rounded-lg h-9 w-9 border-[1.5px] border-gray-200 hover:border-gray-500">
+              {
+                theme === 'dark' ? <FiSun />: <FiMoon />
+              }
+            </button>
           </div>
         </div>
         {menuOpen && (

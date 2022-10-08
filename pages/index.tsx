@@ -8,9 +8,12 @@ import { Container } from "@/components/Container";
 import { RecentPostsCard } from "@/components/home/RecentPostsCard";
 import { SocialMediaLinks } from "@/lib/constants";
 import { Post } from "@/lib/types";
+import { Suspense } from "react";
 
 const Home = ({ posts }: { posts: Post[] }) => {
   return (
+    <Suspense>
+
     <Container>
       <div className="flex flex-col">
         <div className="mb-4 flex flex-col items-center space-x-4 md:flex-row">
@@ -27,7 +30,7 @@ const Home = ({ posts }: { posts: Post[] }) => {
             <h1 className="text-3xl font-bold tracking-tighter md:text-6xl">
               Welcome!
             </h1>
-            <p className="text-base text-gray-700">
+            <p className="text-base text-gray-700 dark:text-gray-300">
               I&apos;m{" "}
               <span className="text-2xl font-bold tracking-tighter text-blue-500 md:text-3xl">
                 Justin Solo
@@ -41,7 +44,7 @@ const Home = ({ posts }: { posts: Post[] }) => {
                   href={link.url}
                   target="_blank"
                   rel="noreferrer"
-                  className="mt-4 border-b text-base text-gray-500 transition-all hover:scale-[1.05] hover:text-blue-500"
+                  className="mt-4 border-b text-base text-gray-500 dark:text-gray-300 dark:hover:text-white transition-all hover:scale-[1.05] hover:text-blue-500"
                 >
                   {link.name}
                 </a>
@@ -69,6 +72,7 @@ const Home = ({ posts }: { posts: Post[] }) => {
         </div>
       </div>
     </Container>
+    </Suspense>
   );
 };
 

@@ -41,6 +41,7 @@ interface Props {
 
 export function Container(props: Props) {
   const [menuOpen, setMenuOpen] = useState(false);
+  const [mounted, setMounted] = useState(false);
   const { theme ,setTheme } = useTheme();
   const router = useRouter();
   const { children, ...customMeta } = props;
@@ -75,6 +76,10 @@ export function Container(props: Props) {
     };
   }, []);
 
+  useEffect(() => {
+    setMounted(true)
+  },[])
+
   return (
     <div className="mx-auto flex h-screen max-w-3xl flex-col dark:bg-black">
       <Head>
@@ -83,7 +88,7 @@ export function Container(props: Props) {
         <link rel="icon" href="/favicon.ico" />
         <meta property="og:type" content={meta.type}></meta>
       </Head>
-      <nav className="">
+      <nav>
         <div className="flex w-full items-center justify-between py-5 px-3 ">
           <div className="hidden md:block">
             {MenuItems.map((item, index) => {
@@ -127,7 +132,7 @@ export function Container(props: Props) {
           <div>
             <button onClick={handleChangeTheme} className="flex justify-center items-center dark:bg-gray-500 dark:border-gray-500 dark:hover:border-gray-200 bg-gray-200 rounded-lg h-9 w-9 border-[1.5px] border-gray-200 hover:border-gray-500">
               {
-                theme === 'dark' ? <FiSun />: <FiMoon />
+                theme === 'dark' && mounted ? <FiSun />: <FiMoon />
               }
             </button>
           </div>

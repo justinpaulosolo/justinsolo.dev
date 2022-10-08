@@ -138,12 +138,12 @@ export function Container(props: Props) {
           </div>
         </div>
         {menuOpen && (
-          <div className="absolute ml-4 h-screen w-full bg-white pr-10">
+          <div className="absolute ml-4 h-screen w-full bg-gray-50 dark:bg-black pr-10">
             {MenuItems.map((item, index) => {
               return (
                 <Link href={item.url} key={index}>
                   <a
-                    className={`block w-full rounded py-2 px-3 hover:bg-gray-100
+                    className={`block w-full rounded py-2 px-3 hover:bg-gray-200 dark:hover:bg-gray-600
                 ${router.asPath === item.url ? "font-bold" : ""}
                 `}
                   >

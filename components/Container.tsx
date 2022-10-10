@@ -8,7 +8,7 @@ import { GoLogoGithub } from "react-icons/go";
 import { SiGithub } from "react-icons/si";
 import { useEffect } from "react";
 import { useTheme } from "next-themes";
-import { FiMoon, FiSun } from "react-icons/fi"
+import { FiMoon, FiSun } from "react-icons/fi";
 
 const MenuItems = [
   {
@@ -42,7 +42,7 @@ interface Props {
 export function Container(props: Props) {
   const [menuOpen, setMenuOpen] = useState(false);
   const [mounted, setMounted] = useState(false);
-  const { theme ,setTheme } = useTheme();
+  const { theme, setTheme } = useTheme();
   const router = useRouter();
   const { children, ...customMeta } = props;
   const meta = {
@@ -62,12 +62,12 @@ export function Container(props: Props) {
     }
   }
 
-  function handleChangeTheme(e: React.MouseEvent<HTMLButtonElement, MouseEvent>){
-    console.log(theme)
-    if(theme === 'dark')
-      setTheme('light')
-    else 
-      setTheme('dark')
+  function handleChangeTheme(
+    e: React.MouseEvent<HTMLButtonElement, MouseEvent>
+  ) {
+    console.log(theme);
+    if (theme === "dark") setTheme("light");
+    else setTheme("dark");
   }
 
   useEffect(() => {
@@ -77,11 +77,11 @@ export function Container(props: Props) {
   }, []);
 
   useEffect(() => {
-    setMounted(true)
-  },[])
+    setMounted(true);
+  }, []);
 
   return (
-    <div className="mx-auto flex h-screen max-w-3xl flex-col dark:bg-black">
+    <div className="mx-auto flex h-screen max-w-3xl flex-col dark:bg-gray-900">
       <Head>
         <title>{meta.title}</title>
         <meta name="description" content={meta.description} />
@@ -114,31 +114,17 @@ export function Container(props: Props) {
               <HiMenu className="h-7 w-7" />
             </button>
           </div>
-          {/* <div className="md:hidden">
-            <GoLogoGithub className="h-7 w-28" />
-          </div>
-          <div className="hidden items-center md:flex">
-            <a
-              href="https://github.com/justinpaulosolo/justinsolo.io"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="flex items-center rounded-lg border border-blue-500 bg-blue-500 py-1.5 px-5 text-white transition-all hover:border-blue-500 hover:bg-white hover:text-blue-500"
-            >
-              <SiGithub />
-              &nbsp;
-              <span className="hidden md:block">Source Code</span>
-            </a>
-          </div> */}
           <div>
-            <button onClick={handleChangeTheme} className="flex justify-center items-center dark:bg-gray-500 dark:border-gray-500 dark:hover:border-gray-200 bg-gray-200 rounded-lg h-9 w-9 border-[1.5px] border-gray-200 hover:border-gray-500">
-              {
-                theme === 'dark' && mounted ? <FiSun />: <FiMoon />
-              }
+            <button
+              onClick={handleChangeTheme}
+              className="flex h-9 w-9 items-center justify-center rounded-lg border-[1.5px] border-gray-200 bg-gray-200 hover:border-gray-500 dark:border-gray-500 dark:bg-gray-500 dark:hover:border-gray-200"
+            >
+              {theme === "dark" && mounted ? <FiSun /> : <FiMoon />}
             </button>
           </div>
         </div>
         {menuOpen && (
-          <div className="absolute ml-4 h-screen w-full bg-gray-50 dark:bg-black pr-10">
+          <div className="absolute ml-4 h-screen w-full bg-gray-50 pr-10 dark:bg-black">
             {MenuItems.map((item, index) => {
               return (
                 <Link href={item.url} key={index}>

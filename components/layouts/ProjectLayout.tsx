@@ -9,7 +9,9 @@ export function ProjectLayout({
     <Container title={post.frontmatter.title}>
       <article>
         <Suspense fallback={null}>
-          <div className="prose mt-4 mb-8 w-full max-w-none">{children}</div>
+          <div className="prose mt-4 mb-8 w-full max-w-none dark:prose-dark">
+            {children}
+          </div>
         </Suspense>
       </article>
     </Container>

@@ -11,7 +11,7 @@ export default function Projects({ projects }: { projects: Project[] }) {
   return (
     <Container title="Projects - Justin Solo">
       <div className="flex h-full w-full flex-col">
-        <h1 className="text-6xl font-bold">Blog</h1>
+        <h1 className="text-6xl font-bold">Projects</h1>
         <div className="mt-8 flex flex-col justify-between gap-4 md:flex-row md:flex-wrap ">
           {projects.map((project, index) => (
             <ProjectCard project={project} key={index} />

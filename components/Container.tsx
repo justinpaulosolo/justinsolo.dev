@@ -124,7 +124,7 @@ export function Container(props: Props) {
           </div>
         </div>
         {menuOpen && (
-          <div className="absolute ml-4 h-screen w-full bg-gray-50 pr-10 dark:bg-black">
+          <div className="absolute ml-4 h-screen w-full bg-gray-50 pr-10 dark:bg-gray-900">
             {MenuItems.map((item, index) => {
               return (
                 <Link href={item.url} key={index}>

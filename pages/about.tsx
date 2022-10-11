@@ -19,10 +19,8 @@ export default function About() {
       <h1 className="text-6xl font-bold">About</h1>
       <p className="mt-4">
         Hello! My name is <span className="font-bold">Justin Solo</span> Im a{" "}
-        <span className="font-bold">Full Stack Developer</span> based in Los
-        Angeles, CA. I&apos;ve had exprience building full stack web
-        applications and working in agile team environments. I&apos;m currently
-        looking for a full time position as a software engineer.
+        Software Engineer passionate about creating innovative and accessible
+        full-stack applications.
       </p>
       <div className="mt-4">
         <h3 className="text-3xl font-bold">On the web</h3>

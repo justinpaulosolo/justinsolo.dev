@@ -20,8 +20,8 @@ const Home = ({ posts }: { posts: Post[] }) => {
               <Image
                 src={profile}
                 alt="profile-pic"
-                width={124}
-                height={124}
+                width={150}
+                height={150}
                 className="mb-2 rounded-full md:mb-0"
               />
             </div>

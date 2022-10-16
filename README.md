@@ -19,3 +19,6 @@
 - Tailwind CSS
 - Vercel
 - TypeScript
+
+> ## Todo
+- [ ] Update ui

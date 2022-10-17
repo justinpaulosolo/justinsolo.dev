@@ -3,7 +3,8 @@ import path from "path";
 import matter from "gray-matter";
 import Image from "next/future/image";
 
-import profile from "@/public/profile.jpeg";
+// @ts-ignore
+import profile from "../public/profile.jpeg";
 import { Container } from "@/components/Container";
 import { RecentPostsCard } from "@/components/home/RecentPostsCard";
 import { SocialMediaLinks } from "@/lib/constants";
@@ -16,26 +17,14 @@ const Home = ({ posts }: { posts: Post[] }) => {
       <Container>
         <div className="flex flex-col">
           <div className="mb-4 flex flex-col items-center space-x-4 md:flex-row">
-            <div className="flex items-center">
-              <Image
-                src={profile}
-                alt="profile-pic"
-                width={150}
-                height={150}
-                className="mb-2 rounded-full md:mb-0"
-              />
-            </div>
-            <div>
-              <h1 className="text-3xl font-bold tracking-tighter md:text-6xl">
-                Welcome!
+            <div className="">
+              <h1 className="text-3xl font-bold tracking-tighter md:text-5xl">
+                Justin Solo
               </h1>
               <p className="text-base text-gray-700 dark:text-gray-300">
-                I&apos;m{" "}
-                <span className="text-2xl font-bold tracking-tighter text-blue-500 md:text-3xl">
-                  Justin Solo
-                </span>{" "}
-                Software Engineer passionate about creating innovative and
-                accessible full-stack applications
+                <span className="text-blue-500">Full-stack engineer </span>{" "}
+                passionate about creating innovative and accessible full-stack
+                applications
               </p>
               <div className="flex space-x-3">
                 {SocialMediaLinks.map((link, index) => (
@@ -50,6 +39,15 @@ const Home = ({ posts }: { posts: Post[] }) => {
                   </a>
                 ))}
               </div>
+            </div>
+            <div className="flex items-center">
+              <Image
+                src={profile}
+                alt="profile-pic"
+                width={180}
+                height={180}
+                className="mb-2 rounded-full md:mb-0"
+              />
             </div>
           </div>
           <div className="mt-12 mb-4">

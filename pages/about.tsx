@@ -18,9 +18,8 @@ export default function About() {
     <Container title="About me - Justin Solo">
       <h1 className="text-6xl font-bold">About</h1>
       <p className="mt-4">
-        Hello! My name is <span className="font-bold">Justin Solo</span> Im a{" "}
-        Software Engineer passionate about creating innovative and accessible
-        full-stack applications.
+        Full stack software engineer passionate about creating innovative and
+        accessible full-stack applications.
       </p>
       <div className="mt-4">
         <h3 className="text-3xl font-bold">On the web</h3>

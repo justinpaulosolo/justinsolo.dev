@@ -23,7 +23,7 @@ const Home = ({ posts }: { posts: Post[] }) => {
                 Developer / Creator
               </p>
               <p className="text-base">
-                I'm passionate about creating innovative and accessible
+                I&apos;m passionate about creating innovative and accessible
                 full-stack applications.
               </p>
               <div className="flex space-x-3">

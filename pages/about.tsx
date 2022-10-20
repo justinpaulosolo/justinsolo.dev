@@ -30,7 +30,7 @@ export default function About() {
                 href={link.url}
                 target="_blank"
                 rel="noreferrer"
-                className="items-center text-blue-500 hover:underline"
+                className="items-center hover:underline"
               >
                 {link.name}
               </a>

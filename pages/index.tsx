@@ -16,7 +16,7 @@ const Home = ({ posts }: { posts: Post[] }) => {
     <Suspense>
       <Container>
         <div className="flex flex-col">
-          <div className="mb-4 flex flex-col items-center space-x-4 md:flex-row">
+          <div className="mb-4 flex flex-col-reverse items-center space-x-4 md:flex-row">
             <div className="space-y-2">
               <h1 className="text-3xl font-bold md:text-5xl">Justin Solo</h1>
               <p className="font-formal text-sm uppercase tracking-wider">
@@ -40,17 +40,17 @@ const Home = ({ posts }: { posts: Post[] }) => {
                 ))}
               </div>
             </div>
-            <div className="flex items-center">
+            <div className="md-flex items-center">
               <Image
                 src={profile}
                 alt="profile-pic"
-                width={180}
-                height={180}
-                className="mb-2 rounded-full md:mb-0"
+                width={200}
+                height={200}
+                className="mb-2 rounded-full md:mb-0 md:w-fit md:rounded-full"
               />
             </div>
           </div>
-          <div className="mt-12 mb-4">
+          <div className="mt-4 mb-4">
             <h1 className="text-3xl font-bold">Recent Posts</h1>
             <RecentPostsCard
               title={posts[0].frontmatter.title}

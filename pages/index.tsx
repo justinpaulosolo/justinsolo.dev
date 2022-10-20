@@ -17,14 +17,14 @@ const Home = ({ posts }: { posts: Post[] }) => {
       <Container>
         <div className="flex flex-col">
           <div className="mb-4 flex flex-col items-center space-x-4 md:flex-row">
-            <div className="">
-              <h1 className="text-3xl font-bold tracking-tighter md:text-5xl">
-                Justin Solo
-              </h1>
-              <p className="text-base text-gray-700 dark:text-gray-300">
-                <span className="text-blue-500">Full-stack engineer </span>{" "}
-                passionate about creating innovative and accessible full-stack
-                applications
+            <div className="space-y-2">
+              <h1 className="text-3xl font-bold md:text-5xl">Justin Solo</h1>
+              <p className="font-formal text-sm uppercase tracking-wider">
+                Developer / Creator
+              </p>
+              <p className="text-base">
+                I'm passionate about creating innovative and accessible
+                full-stack applications.
               </p>
               <div className="flex space-x-3">
                 {SocialMediaLinks.map((link, index) => (
@@ -33,7 +33,7 @@ const Home = ({ posts }: { posts: Post[] }) => {
                     href={link.url}
                     target="_blank"
                     rel="noreferrer"
-                    className="mt-4 border-b text-base text-gray-500 transition-all hover:scale-[1.05] hover:text-blue-500 dark:text-gray-300 dark:hover:text-white"
+                    className="text-base underline transition-all hover:decoration-dotted"
                   >
                     {link.name}
                   </a>

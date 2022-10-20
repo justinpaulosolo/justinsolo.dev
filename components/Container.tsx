@@ -4,8 +4,6 @@ import Link from "next/link";
 import Footer from "./Footer";
 import { HiMenu } from "react-icons/hi";
 import { useState } from "react";
-import { GoLogoGithub } from "react-icons/go";
-import { SiGithub } from "react-icons/si";
 import { useEffect } from "react";
 import { useTheme } from "next-themes";
 import { FiMoon, FiSun } from "react-icons/fi";
@@ -81,7 +79,7 @@ export function Container(props: Props) {
   }, []);
 
   return (
-    <div className="mx-auto flex h-screen max-w-3xl flex-col dark:bg-gray-900">
+    <div className="mx-auto flex h-screen max-w-3xl flex-col dark:bg-neutral-900">
       <Head>
         <title>{meta.title}</title>
         <meta name="description" content={meta.description} />
@@ -98,7 +96,7 @@ export function Container(props: Props) {
                     className={`rounded py-2  px-3 hover:text-gray-800 dark:hover:text-gray-100
                 ${
                   router.asPath === item.url
-                    ? "font-normal text-blue-500"
+                    ? "font-bold"
                     : "text-gray-500 dark:text-gray-400"
                 }
                 `}
@@ -119,12 +117,12 @@ export function Container(props: Props) {
               onClick={handleChangeTheme}
               className="flex h-9 w-9 items-center justify-center rounded-lg border-[1.5px] border-gray-200 bg-gray-200 hover:border-gray-500 dark:border-gray-500 dark:bg-gray-500 dark:hover:border-gray-200"
             >
-              {theme === "dark" && mounted ? <FiSun /> : <FiMoon />}
+              {theme === "dark" && mounted ? <FiMoon /> : <FiSun />}
             </button>
           </div>
         </div>
         {menuOpen && (
-          <div className="absolute ml-4 h-screen w-full bg-gray-50 pr-10 dark:bg-gray-900">
+          <div className="absolute ml-4 h-screen w-full bg-neutral-50 pr-10 dark:bg-neutral-900">
             {MenuItems.map((item, index) => {
               return (
                 <Link href={item.url} key={index}>

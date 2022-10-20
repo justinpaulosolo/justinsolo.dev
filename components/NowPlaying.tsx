@@ -11,7 +11,7 @@ export default function NowPlaying() {
         <FaSpotify className="md:mr-2" />
         {data?.songUrl ? (
           <a
-            className="capsize max-w-max truncate  font-medium text-gray-800"
+            className="capsize max-w-max truncate  font-medium text-neutral-600 dark:text-neutral-400"
             href={data.songUrl}
             target="_blank"
             rel="noopener noreferrer"
@@ -19,12 +19,14 @@ export default function NowPlaying() {
             {data.title}
           </a>
         ) : (
-          <p className="capsize text-gray-800font-medium">Not Playing</p>
+          <p className="capsize font-medium text-neutral-600 dark:text-neutral-400">
+            Not Playing
+          </p>
         )}
-        <span className="capsize mx-2 hidden text-gray-500 sm:block">
+        <span className="capsize mx-2 hidden text-neutral-600 dark:text-neutral-400 sm:block">
           {" – "}
         </span>
-        <p className="capsize max-w-max truncate text-gray-500">
+        <p className="capsize max-w-max truncate text-neutral-600 dark:text-neutral-400">
           {data?.artist ?? "Spotify"}
         </p>
       </div>

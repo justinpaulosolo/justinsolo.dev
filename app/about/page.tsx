@@ -28,16 +28,16 @@ function SocialCard({ title, href }: { title: string; href: string }) {
 export default function AboutPage() {
   return (
     <section className="container space-y-6">
-      <div className="space-y-2">
+      <div className="space-y-6">
         <h1 className="mt-6 text-2xl font-bold tracking-tighter text-black dark:text-white">
           About Me.
         </h1>
-        <div className="">
-          <div className="grid grid-cols-6 gap-y-6">
+        <div>
+          <div className="grid grid-cols-6 gap-y-12">
             <h2 className="col-span-2 font-light tracking-wide text-neutral-700 dark:text-neutral-200">
               about
             </h2>
-            <div className="col-span-4 space-y-2">
+            <div className="col-span-4 space-y-6 text-pretty">
               <p>
                 Hi, I&apos;m a full-stack JavaScript developer who loves to
                 create positive and accessible web experiences with React,
@@ -53,7 +53,7 @@ export default function AboutPage() {
             <h2 className="col-span-2 font-light tracking-wide text-neutral-700 dark:text-neutral-200">
               experience
             </h2>
-            <div className="col-span-4 space-y-2">
+            <div className="col-span-4 space-y-6">
               <div className="flex justify-between">
                 <div>
                   <h3>Full Stack Developer</h3>
@@ -64,7 +64,7 @@ export default function AboutPage() {
               <div className="flex justify-between">
                 <div>
                   <h3>PACT Seaman</h3>
-                  <h3 className="text-neutral-500">Aquifer</h3>
+                  <h3 className="text-neutral-500">United States Navy</h3>
                 </div>
                 <p>2017-2019</p>
               </div>
@@ -72,7 +72,7 @@ export default function AboutPage() {
             <h2 className="col-span-2 font-light tracking-wide text-neutral-700 dark:text-neutral-200">
               connect
             </h2>
-            <div className="col-span-4 flex justify-between gap-2">
+            <div className="col-span-4 flex justify-between gap-3">
               <SocialCard
                 title="LinkedIn"
                 href="https://linkedin.com/justinpaulosolo"

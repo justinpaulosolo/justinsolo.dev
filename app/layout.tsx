@@ -33,7 +33,7 @@ export default function RootLayout({
   return (
     <html lang="en" className={cx("", GeistSans.variable, GeistMono.variable)}>
       <head />
-      <body className="min-h-screen dark:bg-[#1b1b1f] dark:text-white font-sans antialiased">
+      <body className="min-h-screen bg-white font-sans text-black antialiased dark:bg-[#111010] dark:text-white">
         <ThemeProvider attribute="class" defaultTheme="system" enableSystem>
           <div className="flex min-h-screen flex-col">
             <header className="container z-40">
@@ -43,12 +43,12 @@ export default function RootLayout({
                     Justin Solo
                   </h1>
                 </div>
-                <nav className="hidden md:flex gap-3">
+                <nav className="hidden gap-3 md:flex">
                   {Object.entries(navLinks).map(([path, { name }]) => (
                     <Link
                       href={path}
                       key={path}
-                      className="flex items-center text-lg font-medium transition-all sm:text-sm text-neutral-700 dark:text-neutral-200"
+                      className="flex items-center text-lg font-medium text-neutral-700 transition-all sm:text-sm dark:text-neutral-200"
                     >
                       {name}
                     </Link>

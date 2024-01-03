@@ -50,7 +50,7 @@ export default function Home() {
             Justin
           </strong>
           , a full-stack developer passionate about creating scalable and
-          efficient web applications
+          efficient web applications.
         </p>
         <div className="flex gap-2">
           {/* Fix Icons for dark mode */}

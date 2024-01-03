@@ -21,9 +21,9 @@ export default function MainNav() {
   return (
     <header className="container z-40">
       <div className="flex h-20 items-center justify-between py-6">
-        <div>
-          <h1 className="text-xl font-bold tracking-tighter">Justin Solo</h1>
-        </div>
+        <Link href="/" className="text-xl font-bold tracking-tighter">
+          Justin Solo
+        </Link>
         <nav className="hidden gap-3 md:flex">
           {Object.entries(navLinks).map(([path, { name }]) => (
             <Link

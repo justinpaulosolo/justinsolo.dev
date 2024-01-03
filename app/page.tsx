@@ -13,12 +13,30 @@ function ProjectCard({
   technologies: string[];
 }) {
   return (
-    <div className="inline-flex flex-col rounded-lg border px-3 py-4 dark:border-neutral-700">
+    <a
+      target="_blank"
+      href={link}
+      className="group inline-flex flex-col rounded-lg border px-3 py-4 dark:border-neutral-700"
+    >
       <div className="space-y-1.5">
         <h3 className="font-semibold tracking-tight text-black dark:text-white">
-          <a target="_blank" href={link} className="hover:underline">
-            {title}
-          </a>
+          <div className="flex items-center gap-2">
+            <h3>{title}</h3>
+            <div className="transform text-neutral-700 transition-transform duration-300 group-hover:-rotate-12 dark:text-neutral-300">
+              <svg
+                width="12"
+                height="12"
+                viewBox="0 0 12 12"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M2.07102 11.3494L0.963068 10.2415L9.2017 1.98864H2.83807L2.85227 0.454545H11.8438V9.46023H10.2955L10.3097 3.09659L2.07102 11.3494Z"
+                  fill="currentColor"
+                ></path>
+              </svg>
+            </div>
+          </div>
         </h3>
         <p className="text-xs">{description}</p>
       </div>
@@ -34,7 +52,7 @@ function ProjectCard({
           ))}
         </div>
       </div>
-    </div>
+    </a>
   );
 }
 export default function Home() {
@@ -107,6 +125,7 @@ export default function Home() {
             technologies={["Next.js", "Tailwind", "MDX"]}
             title="JustinSolo.dev"
             description="My personal portfolio website built with Next.js and Tailwind, blog using MDX."
+            link="https://justinsolo.dev"
           />
           <ProjectCard
             technologies={[

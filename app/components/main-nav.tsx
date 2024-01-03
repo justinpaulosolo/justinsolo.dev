@@ -25,7 +25,7 @@ export default function MainNav() {
           href="/"
           className="text-xl font-bold tracking-tighter text-black"
         >
-          justinsolo.dev
+          {"//"} justinsolo.dev
         </Link>
         <nav className="hidden gap-3 md:flex">
           {Object.entries(navLinks).map(([path, { name }]) => (

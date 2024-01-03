@@ -14,7 +14,7 @@ function ProjectCard({
 }) {
   return (
     <div className="inline-flex flex-col rounded-lg border p-2 dark:border-neutral-700">
-      <div className="flex flex-col space-y-1.5">
+      <div className="space-y-1.5">
         <h3 className="font-semibold tracking-tight text-black dark:text-white">
           <a target="_blank" href={link} className="hover:underline">
             {title}
@@ -40,7 +40,7 @@ function ProjectCard({
 export default function Home() {
   return (
     <section className="container space-y-6">
-      <div className="mt-6 flex flex-col space-y-2">
+      <div className="mt-6 space-y-2">
         <h1 className="text-2xl font-bold tracking-tighter text-black dark:text-white">
           👋 Hello there.
         </h1>
@@ -80,11 +80,11 @@ export default function Home() {
           </Badge>
         </div>
       </div>
-      <section className="flex flex-col space-y-2">
+      <section className="space-y-2">
         <h2 className="text-sm font-light tracking-wide text-neutral-700 dark:text-neutral-200">
           EXPERIENCE
         </h2>
-        <div className="flex flex-col space-y-1">
+        <div className="space-y-1">
           <h1 className="text-xl font-bold text-black dark:text-white">
             Aquifer
           </h1>
@@ -98,7 +98,7 @@ export default function Home() {
           </p>
         </div>
       </section>
-      <section className="flex flex-col gap-y-2">
+      <section className="space-y-2">
         <h2 className="text-sm font-light tracking-wide text-neutral-700 dark:text-neutral-200">
           RECENT PROJECTS
         </h2>
@@ -122,7 +122,7 @@ export default function Home() {
           />
         </div>
       </section>
-      <section className="flex flex-col gap-y-2">
+      <section className="space-y-2">
         <h2 className="text-pretty text-sm font-light tracking-wide text-neutral-700 dark:text-neutral-200">
           FEATURED BLOG POSTS
         </h2>

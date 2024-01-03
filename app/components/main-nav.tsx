@@ -23,7 +23,7 @@ export default function MainNav() {
       <div className="flex h-20 items-center justify-between py-6">
         <Link
           href="/"
-          className="text-xl font-bold tracking-tighter text-black dark:text-neutral-200"
+          className="text-xl font-bold tracking-tighter text-black dark:text-white"
         >
           {"//"} justinsolo.dev
         </Link>

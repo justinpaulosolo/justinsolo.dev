@@ -5,13 +5,14 @@ export default function Home() {
   return (
     <section className="container space-y-6">
       <div className="mt-6 flex flex-col space-y-2">
-        <h1 className="text-4xl font-bold tracking-tighter text-black">
+        <h1 className="text-4xl font-bold tracking-tighter text-black dark:text-white">
           👋 Hello there.
         </h1>
         <p>
-          I&apos;m <strong className="text-black">Justin</strong>, a full-stack
-          developer passionate about creating scalable and efficient web
-          applications
+          I&apos;m{" "}
+          <strong className="text-black dark:text-white">Justin</strong>, a
+          full-stack developer passionate about creating scalable and efficient
+          web applications
         </p>
         <div className="flex gap-2">
           {/* Fix Icons for dark mode */}
@@ -42,12 +43,14 @@ export default function Home() {
         </div>
       </div>
       <div className="flex flex-col space-y-2">
-        <h2 className="text-sm font-light tracking-wide text-neutral-700">
+        <h2 className="text-sm font-light tracking-wide text-neutral-700 dark:text-neutral-200">
           EXPERIENCE
         </h2>
         <div className="flex flex-col space-y-1">
-          <h1 className="text-xl font-bold text-black">Aquifer</h1>
-          <p className="text-sm font-medium tracking-wide text-neutral-900">
+          <h1 className="text-xl font-bold text-black dark:text-white">
+            Aquifer
+          </h1>
+          <p className="text-sm font-medium tracking-wide text-neutral-900 dark:text-neutral-400">
             Full Stack Developer
           </p>
           <p className="text-sm">
@@ -58,12 +61,12 @@ export default function Home() {
         </div>
       </div>
       <div className="flex flex-col space-y-2">
-        <h2 className="text-sm font-light tracking-wide text-neutral-700">
+        <h2 className="text-sm font-light tracking-wide text-neutral-700 dark:text-neutral-200">
           RECENT PROJECTS
         </h2>
       </div>
       <div className="flex flex-col space-y-2">
-        <h2 className="text-sm font-light tracking-wide text-neutral-700">
+        <h2 className="text-sm font-light tracking-wide text-neutral-700 dark:text-neutral-200">
           FEATURED BLOG POSTS
         </h2>
       </div>

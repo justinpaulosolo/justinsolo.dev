@@ -1,7 +1,7 @@
 export default function ProjectsPage() {
   return (
-    <section>
+    <section className="container">
       <h1>Projects Page</h1>
     </section>
-  )
+  );
 }

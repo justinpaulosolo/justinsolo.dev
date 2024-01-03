@@ -25,6 +25,27 @@ function SocialCard({ title, href }: { title: string; href: string }) {
     </div>
   );
 }
+
+function Experience({
+  position,
+  company,
+  date,
+}: {
+  position: string;
+  company: string;
+  date: string;
+}) {
+  return (
+    <div className="flex justify-between">
+      <div>
+        <h3 className="font-medium">{position}</h3>
+        <p className="text-sm text-neutral-500">{company}</p>
+      </div>
+      <p className="font-medium">{date}</p>
+    </div>
+  );
+}
+
 export default function AboutPage() {
   return (
     <section className="container space-y-6">
@@ -39,35 +60,33 @@ export default function AboutPage() {
             </h2>
             <div className="col-span-4 space-y-6 text-pretty">
               <p>
-                Hi, I&apos;m a full-stack JavaScript developer who loves to
-                create positive and accessible web experiences with React,
-                NEXT.js, SQL, and .NET.
+                I&apos;m a full-stack JavaScript developer obsessed with
+                crafting positive and accessible web experiences. Experience in
+                React, NEXT.js, Blazor, and ASP.NET, I thrive on solving
+                problems and exceeding expectations. I&apos;m always learning,
+                always iterating, and always striving to make the web a more
+                welcoming and engaging place.
               </p>
               <p>
-                I enjoy solving problems and delivering value to users and
-                clients. Whether it&apos;s building a responsive UI, optimizing
-                a database query, or deploying a web app, I always strive to do
-                my best and have fun along the way.
+                In my free time, you&apos;ll find me contributing to open source
+                projects, building computers, or conquering epic hikes - both
+                adventures that fuel my creativity and problem-solving skills.
               </p>
             </div>
             <h2 className="col-span-2 font-light tracking-wide text-neutral-700 dark:text-neutral-200">
               experience
             </h2>
             <div className="col-span-4 space-y-6">
-              <div className="flex justify-between">
-                <div>
-                  <h3>Full Stack Developer</h3>
-                  <h3 className="text-neutral-500">Aquifer</h3>
-                </div>
-                <p>2022</p>
-              </div>
-              <div className="flex justify-between">
-                <div>
-                  <h3>PACT Seaman</h3>
-                  <h3 className="text-neutral-500">United States Navy</h3>
-                </div>
-                <p>2017-2019</p>
-              </div>
+              <Experience
+                position="Full Stack Developer"
+                company="Aquifer"
+                date="2022"
+              />
+              <Experience
+                position="PACT Seaman"
+                company="United States Navy"
+                date="2017-2019"
+              />
             </div>
             <h2 className="col-span-2 font-light tracking-wide text-neutral-700 dark:text-neutral-200">
               connect

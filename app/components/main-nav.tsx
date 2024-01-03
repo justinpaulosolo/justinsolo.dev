@@ -21,7 +21,10 @@ export default function MainNav() {
   return (
     <header className="container z-40">
       <div className="flex h-20 items-center justify-between py-6">
-        <Link href="/" className="text-xl font-bold tracking-tighter">
+        <Link
+          href="/"
+          className="text-xl font-bold tracking-tighter text-black"
+        >
           justinsolo.dev
         </Link>
         <nav className="hidden gap-3 md:flex">

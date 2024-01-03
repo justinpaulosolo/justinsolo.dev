@@ -55,6 +55,7 @@ function ProjectCard({
     </a>
   );
 }
+
 export default function Home() {
   return (
     <section className="container space-y-8">

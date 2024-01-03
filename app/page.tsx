@@ -47,10 +47,10 @@ export default function Home() {
         </h2>
         <div className="flex flex-col space-y-1">
           <h1 className="text-xl font-bold text-black">Aquifer</h1>
-          <p className="text-sm  font-medium text-neutral-900">
-            Full-stack Developer
+          <p className="text-sm font-medium tracking-wide text-neutral-900">
+            Full Stack Developer
           </p>
-          <p>
+          <p className="text-sm">
             Developed user authentication and authorization systems, utilizing
             claims-based security protocols. Technologies: React, ASP.NET, SQL
             Server

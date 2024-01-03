@@ -13,7 +13,7 @@ function ProjectCard({
   technologies: string[];
 }) {
   return (
-    <div className="inline-flex flex-col rounded-lg border p-2 dark:border-neutral-700">
+    <div className="inline-flex flex-col rounded-lg border px-3 py-4 dark:border-neutral-700">
       <div className="space-y-1.5">
         <h3 className="font-semibold tracking-tight text-black dark:text-white">
           <a target="_blank" href={link} className="hover:underline">
@@ -39,7 +39,7 @@ function ProjectCard({
 }
 export default function Home() {
   return (
-    <section className="container space-y-6">
+    <section className="container space-y-8">
       <div className="mt-6 space-y-2">
         <h1 className="text-2xl font-bold tracking-tighter text-black dark:text-white">
           👋 Hello there.
@@ -102,7 +102,7 @@ export default function Home() {
         <h2 className="text-sm font-light tracking-wide text-neutral-700 dark:text-neutral-200">
           RECENT PROJECTS
         </h2>
-        <div className="-mx-2 grid grid-cols-1 gap-2 sm:grid-cols-2">
+        <div className="-mx-2 grid grid-cols-1 gap-4 sm:grid-cols-2">
           <ProjectCard
             technologies={["Next.js", "Tailwind", "MDX"]}
             title="JustinSolo.dev"

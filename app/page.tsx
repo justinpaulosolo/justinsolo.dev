@@ -10,9 +10,11 @@ export default function Home() {
         </h1>
         <p>
           I&apos;m{" "}
-          <strong className="text-black dark:text-white">Justin</strong>, a
-          full-stack developer passionate about creating scalable and efficient
-          web applications
+          <strong className="text-pretty text-black dark:text-white">
+            Justin
+          </strong>
+          , a full-stack developer passionate about creating scalable and
+          efficient web applications
         </p>
         <div className="flex gap-2">
           {/* Fix Icons for dark mode */}
@@ -42,7 +44,7 @@ export default function Home() {
           </Badge>
         </div>
       </div>
-      <div className="flex flex-col space-y-2">
+      <section className="flex flex-col space-y-2">
         <h2 className="text-sm font-light tracking-wide text-neutral-700 dark:text-neutral-200">
           EXPERIENCE
         </h2>
@@ -50,26 +52,26 @@ export default function Home() {
           <h1 className="text-xl font-bold text-black dark:text-white">
             Aquifer
           </h1>
-          <p className="text-sm font-medium tracking-wide text-neutral-900 dark:text-neutral-400">
+          <p className="text-sm font-medium tracking-wide text-neutral-900 dark:text-neutral-100">
             Full Stack Developer
           </p>
           <p className="text-sm">
             Developed user authentication and authorization systems, utilizing
-            claims-based security protocols. Technologies: React, ASP.NET, SQL
-            Server
+            claims-based security protocols. Technologies: ASP.NET, ADO.NET,
+            React, SQL Server
           </p>
         </div>
-      </div>
-      <div className="flex flex-col space-y-2">
+      </section>
+      <section className="flex flex-col space-y-2">
         <h2 className="text-sm font-light tracking-wide text-neutral-700 dark:text-neutral-200">
           RECENT PROJECTS
         </h2>
-      </div>
-      <div className="flex flex-col space-y-2">
-        <h2 className="text-sm font-light tracking-wide text-neutral-700 dark:text-neutral-200">
+      </section>
+      <section className="flex flex-col space-y-2">
+        <h2 className="text-pretty text-sm font-light tracking-wide text-neutral-700 dark:text-neutral-200">
           FEATURED BLOG POSTS
         </h2>
-      </div>
+      </section>
     </section>
   );
 }

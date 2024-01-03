@@ -41,7 +41,7 @@ export default function Home() {
   return (
     <section className="container space-y-6">
       <div className="mt-6 flex flex-col space-y-2">
-        <h1 className="text-4xl font-bold tracking-tighter text-black dark:text-white">
+        <h1 className="text-2xl font-bold tracking-tighter text-black dark:text-white">
           👋 Hello there.
         </h1>
         <p>

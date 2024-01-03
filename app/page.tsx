@@ -1,42 +1,7 @@
 import Image from "next/image";
 import Badge from "./components/badge";
+import { ProjectCard } from "./components/project-card";
 
-function ProjectCard({
-  title,
-  link,
-  description,
-  technologies,
-}: {
-  title: string;
-  link?: string;
-  description: string;
-  technologies: string[];
-}) {
-  return (
-    <div className="inline-flex flex-col rounded-lg border px-3 py-4 dark:border-neutral-700">
-      <div className="space-y-1.5">
-        <h3 className="font-semibold tracking-tight text-black dark:text-white">
-          <a target="_blank" href={link} className="hover:underline">
-            {title}
-          </a>
-        </h3>
-        <p className="text-xs">{description}</p>
-      </div>
-      <div className="mt-auto flex">
-        <div className="mt-2 flex flex-wrap gap-1">
-          {technologies.map((technology, index) => (
-            <div
-              key={index}
-              className="inline-flex items-center text-nowrap rounded border border-neutral-200 bg-neutral-50 px-1 py-0 text-[10px] font-semibold  dark:border-neutral-700 dark:bg-neutral-800 dark:text-neutral-100"
-            >
-              {technology}
-            </div>
-          ))}
-        </div>
-      </div>
-    </div>
-  );
-}
 export default function Home() {
   return (
     <section className="container space-y-8">
@@ -107,6 +72,7 @@ export default function Home() {
             technologies={["Next.js", "Tailwind", "MDX"]}
             title="JustinSolo.dev"
             description="My personal portfolio website built with Next.js and Tailwind, blog using MDX."
+            link="https://justinsolo.dev"
           />
           <ProjectCard
             technologies={[

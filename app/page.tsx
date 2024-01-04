@@ -11,7 +11,7 @@ export default function Home() {
         </h1>
         <p>
           I&apos;m{" "}
-          <strong className="text-pretty text-black dark:text-white">
+          <strong className="text-pretty font-semibold text-black dark:text-white">
             Justin
           </strong>
           , a full-stack developer passionate about creating scalable and
@@ -50,9 +50,7 @@ export default function Home() {
           EXPERIENCE
         </h2>
         <div className="space-y-1">
-          <h1 className="text-xl font-bold text-black dark:text-white">
-            Aquifer
-          </h1>
+          <h3 className="font-bold text-black dark:text-white">Aquifer</h3>
           <p className="text-sm font-medium tracking-wide text-neutral-900 dark:text-neutral-100">
             Full Stack Developer
           </p>

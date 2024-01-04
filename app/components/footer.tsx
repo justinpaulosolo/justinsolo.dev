@@ -67,7 +67,7 @@ export default function Footer() {
               Blog
             </Link>
           </div> */}
-          <h3 className="text-sm font-medium tracking-tighter text-neutral-700 dark:text-neutral-200">
+          <h3 className="text-sm tracking-tighter text-neutral-700 dark:text-neutral-300">
             © 2024 Justin Solo
           </h3>
         </div>

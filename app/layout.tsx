@@ -5,6 +5,7 @@ import "./globals.css";
 import { ThemeProvider } from "./components/theme-provider";
 import MainNav from "./components/main-nav";
 import { cn } from "@/lib/utils";
+import Footer from "./components/footer";
 
 export const metadata: Metadata = {
   title: "Create Next App",
@@ -21,7 +22,7 @@ export default function RootLayout({
       <head />
       <body
         className={cn(
-          "min-h-screen bg-white font-sans text-neutral-700 antialiased dark:bg-[#111010] dark:text-neutral-200",
+          "bg-white font-sans text-neutral-700 antialiased dark:bg-[#111010] dark:text-neutral-200",
           GeistSans.variable,
           GeistMono.variable
         )}
@@ -30,6 +31,7 @@ export default function RootLayout({
           <div className="flex min-h-screen flex-col">
             <MainNav />
             <main className="flex-1">{children}</main>
+            <Footer />
           </div>
         </ThemeProvider>
       </body>

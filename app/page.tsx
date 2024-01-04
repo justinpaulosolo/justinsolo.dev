@@ -1,4 +1,3 @@
-import Image from "next/image";
 import Badge from "./components/badge";
 import { ProjectCard } from "./components/project-card";
 

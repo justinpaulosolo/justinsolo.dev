@@ -7,7 +7,7 @@ export default function Footer() {
       <div className="container">
         <div className="flex h-10 items-center justify-between border-t border-t-neutral-200 py-6 dark:border-t-neutral-400">
           <a
-            className="inline-flex items-center gap-1 rounded border border-neutral-200 bg-neutral-50 p-1 text-sm leading-4 tracking-tight text-neutral-700 no-underline transition-colors hover:bg-neutral-100 hover:text-black dark:border-neutral-700 dark:bg-neutral-800 dark:text-neutral-300"
+            className="group inline-flex items-center gap-1 rounded border border-neutral-200 bg-neutral-50 p-1 text-sm leading-4 tracking-tight text-neutral-700 no-underline transition-all dark:border-neutral-700 dark:bg-neutral-800 dark:text-neutral-300"
             target="_blank"
             href="https://github.com/justinpaulosolo/justinsolo.dev"
           >
@@ -16,7 +16,7 @@ export default function Footer() {
               width="18"
               height="18"
               fill="none"
-              className="stroke-neutral-700 hover:stroke-black dark:stroke-neutral-300"
+              className="stroke-neutral-700 dark:stroke-neutral-300"
               stroke-width="1.5"
               viewBox="0 0 24 24"
             >
@@ -31,7 +31,21 @@ export default function Footer() {
                 d="M9 20.0267c-3 .9732-5.5 0-7-3"
               />
             </svg>
-            Source Code
+            <p>Source Code</p>
+            <div className="transform text-neutral-700 transition-transform duration-300 group-hover:-rotate-12 dark:text-neutral-300">
+              <svg
+                width="12"
+                height="12"
+                viewBox="0 0 12 12"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M2.07102 11.3494L0.963068 10.2415L9.2017 1.98864H2.83807L2.85227 0.454545H11.8438V9.46023H10.2955L10.3097 3.09659L2.07102 11.3494Z"
+                  fill="currentColor"
+                ></path>
+              </svg>
+            </div>
           </a>
           {/* <div className="flex items-center space-x-4">
             <Link

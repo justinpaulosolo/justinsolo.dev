@@ -4,7 +4,7 @@ function SocialCard({ title, href }: { title: string; href: string }) {
       <a
         target="_blank"
         href={href}
-        className="flex w-full items-center justify-between text-nowrap rounded border border-neutral-200 p-1.5 font-medium text-black dark:border-neutral-700  dark:text-neutral-100 dark:text-white"
+        className="flex w-full items-center justify-between text-nowrap rounded border border-neutral-200 p-1.5 font-medium text-black dark:border-neutral-700 dark:text-white"
       >
         <p>{title}</p>
         <div className="transform text-neutral-700 transition-transform duration-300 group-hover:-rotate-12 dark:text-neutral-300">

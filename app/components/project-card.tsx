@@ -48,11 +48,11 @@ export function ProjectCard({
         <p className="text-xs">{description}</p>
       </div>
       <div className="mt-auto flex">
-        <div className="mt-2 flex flex-wrap gap-1">
+        <div className="mt-4 flex flex-wrap gap-1">
           {technologies.map((technology, index) => (
             <div
               key={index}
-              className="inline-flex items-center text-nowrap rounded border border-neutral-200 bg-neutral-50 px-1 py-0 text-[10px] font-semibold  dark:border-neutral-700 dark:bg-neutral-800 dark:text-neutral-100"
+              className="inline-flex items-center text-nowrap rounded border border-neutral-200 bg-neutral-50 px-1 py-0 text-[10px] dark:border-neutral-700 dark:bg-neutral-800 dark:text-neutral-100"
             >
               {technology}
             </div>

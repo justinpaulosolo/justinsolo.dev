@@ -1,10 +1,10 @@
 function SocialCard({ title, href }: { title: string; href: string }) {
   return (
-    <div className="group flex w-full">
+    <div className="auto group flex w-full">
       <a
         target="_blank"
         href={href}
-        className="flex w-full items-center justify-between text-nowrap rounded border border-neutral-200 p-1.5 font-medium text-black dark:border-neutral-700 dark:text-white"
+        className="flex w-full items-center justify-between gap-2 text-nowrap rounded border border-neutral-200 p-1.5 font-medium text-black md:gap-0 dark:border-neutral-700 dark:text-white"
       >
         <p>{title}</p>
         <div className="transform text-neutral-700 transition-transform duration-300 group-hover:-rotate-12 dark:text-neutral-300">
@@ -91,7 +91,7 @@ export default function AboutPage() {
             <h2 className="col-span-2 font-light tracking-wide text-neutral-700 dark:text-neutral-200">
               connect
             </h2>
-            <div className="col-span-4 flex justify-between gap-3">
+            <div className="col-span-4 grid grid-cols-1 gap-2 sm:grid-cols-3">
               <SocialCard
                 title="LinkedIn"
                 href="https://linkedin.com/justinpaulosolo"

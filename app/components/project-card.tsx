@@ -45,7 +45,7 @@ export function ProjectCard({
             </div>
           </div>
         </h3>
-        <p className="text-xs">{description}</p>
+        <p className="text-sm">{description}</p>
       </div>
       <div className="mt-auto flex">
         <div className="mt-4 flex flex-wrap gap-1">

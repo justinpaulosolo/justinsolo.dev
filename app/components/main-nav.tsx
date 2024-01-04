@@ -18,6 +18,7 @@ const navLinks = {
 
 export default function MainNav() {
   const currentPath = usePathname();
+
   return (
     <header className="container z-40">
       <div className="flex h-20 items-center justify-between py-6">
@@ -27,13 +28,13 @@ export default function MainNav() {
         >
           {"//"}justinsolo.dev
         </Link>
-        <nav className="hidden gap-3 md:flex">
+        <nav className="flex gap-3">
           {Object.entries(navLinks).map(([path, { name }]) => (
             <Link
               href={path}
               key={path}
               className={cn(
-                "flex items-center text-lg font-medium text-neutral-700 transition-all sm:text-sm dark:text-neutral-200",
+                "flex items-center text-sm font-medium text-neutral-700 transition-all sm:text-sm dark:text-neutral-200",
                 currentPath === path && "text-black dark:text-neutral-400"
               )}
             >

@@ -116,7 +116,7 @@ export default function Home() {
               "Typescript",
               "SQL Server",
             ]}
-            title="Cripsy Happiness"
+            title="Crispy Happiness"
             link="https://github.com/justinpaulosolo/CalorieTracker"
             description="Online platform to track and set fitness goals."
           />

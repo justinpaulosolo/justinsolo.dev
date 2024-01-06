@@ -122,11 +122,6 @@ export default function Home() {
           />
         </div>
       </section>
-      <section className="space-y-2">
-        <h2 className="text-pretty text-sm font-light tracking-wide text-neutral-700 dark:text-neutral-200">
-          FEATURED BLOG POSTS
-        </h2>
-      </section>
     </section>
   );
 }

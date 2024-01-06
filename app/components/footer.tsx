@@ -13,17 +13,17 @@ export default function Footer() {
             height="18"
             fill="none"
             className="stroke-neutral-700 dark:stroke-neutral-300"
-            stroke-width="1.5"
+            strokeWidth="1.5"
             viewBox="0 0 24 24"
           >
             <path
-              stroke-linecap="round"
-              stroke-linejoin="round"
+              strokeLinecap="round"
+              strokeLinejoin="round"
               d="M16 22.0268v-2.87c.0375-.4768-.0269-.9562-.189-1.4062-.1621-.45-.4181-.8604-.751-1.2038 3.14-.35 6.44-1.54 6.44-7.00001-.0003-1.39617-.5373-2.7388-1.5-3.75.4558-1.22149.4236-2.57165-.09-3.77 0 0-1.18-.35-3.91 1.48-2.292-.62118-4.708-.62118-7.00001 0-2.73-1.83-3.91-1.48-3.91-1.48-.51363 1.19835-.54586 2.54851-.09 3.77-.96988 1.0187-1.50748 2.37347-1.5 3.78 0 5.42001 3.29999 6.61001 6.43999 7.00001-.329.34-.58273.7454-.74469 1.1899-.16195.4445-.2285.9182-.1953 1.3901v2.87"
             />
             <path
-              stroke-linecap="round"
-              stroke-linejoin="round"
+              strokeLinecap="round"
+              strokeLinejoin="round"
               d="M9 20.0267c-3 .9732-5.5 0-7-3"
             />
           </svg>

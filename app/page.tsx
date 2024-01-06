@@ -1,7 +1,10 @@
+import Link from "next/link";
 import Badge from "./components/badge";
 import { ProjectCard } from "./components/project-card";
+import { getBlogPosts } from "./lib/blog";
 
 export default function Home() {
+  let posts = getBlogPosts();
   return (
     <section className="container space-y-8">
       <div className="mt-6 space-y-2">
@@ -126,6 +129,21 @@ export default function Home() {
         <h2 className="text-sm font-light tracking-wide text-neutral-700 dark:text-neutral-200">
           Featured Blog Posts
         </h2>
+        <div className="flex flex-col space-y-3">
+          {posts.map((post) => (
+            <Link
+              className="flex flex-col space-y-1"
+              key={post?.slug}
+              href={`/blog/${post?.slug}`}
+            >
+              <h2 className="text-xl font-bold">{post?.title}</h2>
+              <p className="text-sm">{post?.description}</p>
+              <dl className="text-xs tracking-wide">
+                <time>{post?.date}</time>
+              </dl>
+            </Link>
+          ))}
+        </div>
       </section>
     </section>
   );

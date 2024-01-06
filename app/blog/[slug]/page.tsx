@@ -12,8 +12,14 @@ export default function Blog({ params }: { params: { slug: string } }) {
 
   return (
     <section className="container">
-      <h1>{post?.title}</h1>
-      <CustomMDX source={post?.content} />
+      <article className="prose">
+        <h1 className="mt-6 text-2xl font-bold tracking-tighter text-black dark:text-white">
+          {post?.title}
+        </h1>
+        <article className="prose prose-neutral dark:prose-invert">
+          <CustomMDX source={post?.content} />
+        </article>
+      </article>
     </section>
   );
 }

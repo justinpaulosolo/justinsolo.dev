@@ -1,4 +1,6 @@
+import { CustomMDX } from "@/app/components/mdx";
 import { getBlogPosts } from "@/app/lib/blog";
+import { MDXRemote } from "next-mdx-remote/rsc";
 import { notFound } from "next/navigation";
 
 export default function Blog({ params }: { params: { slug: string } }) {
@@ -11,6 +13,7 @@ export default function Blog({ params }: { params: { slug: string } }) {
   return (
     <section className="container">
       <h1>{post?.title}</h1>
+      <CustomMDX source={post?.content} />
     </section>
   );
 }

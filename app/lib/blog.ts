@@ -50,7 +50,7 @@ function getMDXData(dir: string) {
       return null;
     }
 
-    return { ...data, body: content } as Post;
+    return { ...data, content: content } as Post;
   });
 }
 

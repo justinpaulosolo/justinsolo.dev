@@ -4,6 +4,6 @@ export type Post = {
   date: string;
   tags: string[];
   description: string;
-  body: string;
+  content: string;
   lastModified?: number;
 };

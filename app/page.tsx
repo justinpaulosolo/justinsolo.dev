@@ -127,7 +127,7 @@ export default function Home() {
       </section>
       <section className="space-y-2">
         <h2 className="text-sm font-light tracking-wide text-neutral-700 dark:text-neutral-200">
-          Featured Blog Posts
+          FEATURED BLOG POSTS
         </h2>
         <div className="flex flex-col space-y-3">
           {posts.map((post) => (

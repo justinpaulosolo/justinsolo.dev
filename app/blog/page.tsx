@@ -3,7 +3,6 @@ import { getBlogPosts } from "../lib/blog";
 
 export default function BlogPage() {
   let post = getBlogPosts();
-  console.log(post);
   return (
     <section className="container space-y-6">
       <h1 className="mt-6 text-2xl font-bold tracking-tighter text-black dark:text-white">

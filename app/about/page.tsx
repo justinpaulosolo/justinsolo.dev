@@ -60,18 +60,22 @@ export default function AboutPage() {
             </h2>
             <div className="col-span-4 space-y-6 text-pretty">
               <p>
-                I&apos;m a full-stack JavaScript developer obsessed with
-                crafting positive and accessible web experiences. Experience in
-                React, NEXT.js, Blazor, and ASP.NET, I thrive on solving
-                problems and exceeding expectations. I&apos;m always learning,
-                always iterating, and always striving to make the web a more
-                welcoming and engaging place.
+                Building rock-solid systems, brick by digital brick.
               </p>
               <p>
-                In my free time, you&apos;ll find me contributing to open source
-                projects, building computers, or conquering epic hikes - both
-                adventures that fuel my creativity and problem-solving skills.
+                I&apos;m a Backend Engineer and System Architect passionate about designing and building efficient, scalable, and secure web infrastructures. While my journey began in the full-stack realm, my focus has now morphed into crafting the critical backbone of web applications, optimizing performance, and ensuring seamless user experiences.
               </p>
+              <p>
+                My passion lies in crafting innovative backend solutions that power amazing online experiences. I'm always eager to collaborate, learn new things, and build something impactful. Let's connect and embark on a digital adventure together!
+              </p>
+            </div>
+            <h2 className="col-span-2 font-light tracking-wide text-neutral-700 dark:text-neutral-200">
+              my toolbox
+            </h2>
+            <div className="col-span-4 space-y-6 text-pretty">
+              <li>Backend Mastery: Fluent in languages like Python, Java, and Go, I tackle server-side development and API creation with ease.</li>
+              <li>Architecting for the Future: I thrive on designing robust, cloud-native architectures that are adaptable and ready to grow.</li>
+              <li>DevOps Evangelist: Bridging the gap between development and operations, I automate workflows and embrace CI/CD practices for agile deployments.</li>
             </div>
             <h2 className="col-span-2 font-light tracking-wide text-neutral-700 dark:text-neutral-200">
               experience

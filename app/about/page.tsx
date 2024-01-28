@@ -66,7 +66,7 @@ export default function AboutPage() {
                 I&apos;m a Backend Engineer and System Architect passionate about designing and building efficient, scalable, and secure web infrastructures. While my journey began in the full-stack realm, my focus has now morphed into crafting the critical backbone of web applications, optimizing performance, and ensuring seamless user experiences.
               </p>
               <p>
-                My passion lies in crafting innovative backend solutions that power amazing online experiences. I'm always eager to collaborate, learn new things, and build something impactful. Let's connect and embark on a digital adventure together!
+                My passion lies in crafting innovative backend solutions that power amazing online experiences. I&apos;m always eager to collaborate, learn new things, and build something impactful. Let&apos;s connect and embark on a digital adventure together!
               </p>
             </div>
             <h2 className="col-span-2 font-light tracking-wide text-neutral-700 dark:text-neutral-200">

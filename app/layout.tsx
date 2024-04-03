@@ -7,6 +7,7 @@ import MainNav from "./components/main-nav";
 import { cn } from "@/lib/utils";
 import Footer from "./components/footer";
 import { Analytics } from "@vercel/analytics/react"
+import { SpeedInsights } from "@vercel/speed-insights/next"
 
 export const metadata: Metadata = {
   title: "Justin Solo - Full Stack Developer",
@@ -36,6 +37,7 @@ export default function RootLayout({
           </div>
         </ThemeProvider>
         <Analytics />
+        <SpeedInsights />
       </body>
     </html>
   );

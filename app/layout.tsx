@@ -14,6 +14,7 @@ export const metadata: Metadata = {
   description: "Justin Solo personal portfolio / website.",
 };
 
+// TODO: Page prevented back/forward cache restoration
 export default function RootLayout({
   children,
 }: {

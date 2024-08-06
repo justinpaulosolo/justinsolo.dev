@@ -1,0 +1,30 @@
+---
+const navLinks = {
+    "/": {
+        name: "home",
+    },
+    "/about": {
+        name: "about",
+    },
+};
+---
+
+<header class="container z-40">
+    <div class="flex h-20 items-center justify-between py-6">
+        <a href="/" class="text-xl font-extrabold tracking-tighter"
+            >{"// "}Jvstin Solo</a
+        >
+        <div class="flex gap-3">
+            {
+                Object.entries(navLinks).map(([path, { name }]) => (
+                    <a
+                        href={path}
+                        class="text-sm font-medium text-neutral-700 transition-all sm:text-sm"
+                    >
+                        {name}
+                    </a>
+                ))
+            }
+        </div>
+    </div>
+</header>

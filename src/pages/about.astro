@@ -1,0 +1,39 @@
+---
+import SocialCard from "../components/SocialCard.astro";
+import Layout from "../layouts/Layout.astro";
+---
+
+<Layout title="Justin Solo-About">
+    <main class="flex-1 container">
+        <div class="flex flex-col space-y-2">
+            <h1 class="font-bold text-xl">About</h1>
+            <p>
+                I'm a software developer with a strong focus on backend systems,
+                dedicated to creating efficient, scalable, and secure web
+                infrastructures. My journey started as a full-stack developer,
+                but I've since specialized in the backend, optimizing
+                performance and ensuring smooth user experiences. As a US Navy
+                veteran, I'm driven by discipline and a commitment to
+                excellence. I'm passionate about developing innovative backend
+                solutions that enhance online interactions. Always eager to
+                collaborate and learn, I'm excited to connect and build
+                impactful digital solutions together!
+            </p>
+            <h1 class="font-bold text-xl pt-4">Links</h1>
+            <div class="flex gap-2">
+                <SocialCard
+                    href="https://www.github.com/justinpaulosolo"
+                    title="Github"
+                />
+                <SocialCard
+                    href="https://linkedin.com/justinpaulosolo"
+                    title="LinkedIn"
+                />
+                <SocialCard
+                    title="Email"
+                    href="mailto:justinpaulosolo@outlook.com"
+                />
+            </div>
+        </div>
+    </main>
+</Layout>
